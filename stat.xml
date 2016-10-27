@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<result>
+
+    <struct name="GameStat" comment="gameserver统计结构">
+        
+        <member name="RoomNum" comment="房间数目"/>
+        <member name="PlayerNum" comment="玩家数目"/>
+        
+		<array name="RoomStateNum" comment="房间 各状态数目" length="10"/>
+		
+		<array name="RoomSeatsNum" comment="房间 各人数数目" length="10"/>
+		
+        <hashmap name="TopRoomNum" comment="Top房间人数" top="5"/>
+		
+        <toparray name="TopRecvPacketNum" comment="client端 Top收包数目" length="200" top="5"/>
+        <toparray name="TopSendPacketNum" comment="client端 Top发包数目" length="200" top="5"/>
+        <toparray name="TopRecvSizeNum" comment="client端 Top收包流量" length="200" top="5"/>
+        <toparray name="TopSendSizeNum" comment="client端 Top发包流量" length="200" top="5"/>
+        <toparray name="TopProcessTime" comment="client端 Top收包处理时间" length="200" top="5"/>
+        
+    </struct>
+    
+</result>
