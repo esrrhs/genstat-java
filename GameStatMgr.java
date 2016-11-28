@@ -37,6 +37,15 @@ public class GameStatMgr
     // 桌子数目
     private int UserIdToSessionIdNum;
     
+    // 开局的桌子
+    private int BeginNum;
+    
+    // 结算的桌子
+    private int EndNum;
+    
+    // 异常的桌子
+    private int ExceptionNum;
+    
     // 请求分桌数目
     private int JoinNum;
     
@@ -362,6 +371,60 @@ public class GameStatMgr
     public void addUserIdToSessionIdNum(int _UserIdToSessionIdNum)
     {
         UserIdToSessionIdNum += _UserIdToSessionIdNum;
+    }
+    
+    // get 开局的桌子
+    public int getBeginNum()
+    {
+        return BeginNum;
+    }
+    
+    // set 开局的桌子
+    public void setBeginNum(int _BeginNum)
+    {
+        BeginNum = _BeginNum;
+    }
+    
+    // add 开局的桌子
+    public void addBeginNum(int _BeginNum)
+    {
+        BeginNum += _BeginNum;
+    }
+    
+    // get 结算的桌子
+    public int getEndNum()
+    {
+        return EndNum;
+    }
+    
+    // set 结算的桌子
+    public void setEndNum(int _EndNum)
+    {
+        EndNum = _EndNum;
+    }
+    
+    // add 结算的桌子
+    public void addEndNum(int _EndNum)
+    {
+        EndNum += _EndNum;
+    }
+    
+    // get 异常的桌子
+    public int getExceptionNum()
+    {
+        return ExceptionNum;
+    }
+    
+    // set 异常的桌子
+    public void setExceptionNum(int _ExceptionNum)
+    {
+        ExceptionNum = _ExceptionNum;
+    }
+    
+    // add 异常的桌子
+    public void addExceptionNum(int _ExceptionNum)
+    {
+        ExceptionNum += _ExceptionNum;
     }
     
     // get 请求分桌数目
@@ -1006,6 +1069,15 @@ public class GameStatMgr
 		// 桌子数目
 		UserIdToSessionIdNum = 0;
 		
+		// 开局的桌子
+		BeginNum = 0;
+		
+		// 结算的桌子
+		EndNum = 0;
+		
+		// 异常的桌子
+		ExceptionNum = 0;
+		
 		// 请求分桌数目
 		JoinNum = 0;
 		
@@ -1223,6 +1295,15 @@ public class GameStatMgr
 			
 			// 桌子数目
 			"UserIdToSessionIdNum\t%d\t桌子数目\n" +
+			
+			// 开局的桌子
+			"BeginNum\t%d\t开局的桌子\n" +
+			
+			// 结算的桌子
+			"EndNum\t%d\t结算的桌子\n" +
+			
+			// 异常的桌子
+			"ExceptionNum\t%d\t异常的桌子\n" +
 			
 			// 请求分桌数目
 			"JoinNum\t%d\t请求分桌数目\n" +
@@ -1580,6 +1661,15 @@ public class GameStatMgr
 			
 			// 桌子数目
 			, UserIdToSessionIdNum
+			
+			// 开局的桌子
+			, BeginNum
+			
+			// 结算的桌子
+			, EndNum
+			
+			// 异常的桌子
+			, ExceptionNum
 			
 			// 请求分桌数目
 			, JoinNum

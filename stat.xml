@@ -11,6 +11,10 @@
         <member name="UserIdToSessionIdNum" comment="桌子数目"/>
 				
 		<array name="RoomTableNum" comment="各个房间的桌子数目" length="30"/>
+				
+        <member name="BeginNum" comment="开局的桌子"/>
+        <member name="EndNum" comment="结算的桌子"/>
+        <member name="ExceptionNum" comment="异常的桌子"/>
 		
         <member name="JoinNum" comment="请求分桌数目"/>
         <member name="JoinFailNum" comment="分桌失败数目"/>
