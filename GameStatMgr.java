@@ -94,6 +94,15 @@ public class GameStatMgr
     // 分到新桌数目
     private int JoinNewNum;
     
+    // 删除player数目
+    private int DeleteInactivePlayerNum;
+    
+    // 删除session数目
+    private int DeleteInactiveSessionNum;
+    
+    // 删除routine数目
+    private int DeleteInactiveRoutineNum;
+    
     // 收包数目
     private int RecvPacketNum;
     
@@ -715,6 +724,60 @@ public class GameStatMgr
         JoinNewNum += _JoinNewNum;
     }
     
+    // get 删除player数目
+    public int getDeleteInactivePlayerNum()
+    {
+        return DeleteInactivePlayerNum;
+    }
+    
+    // set 删除player数目
+    public void setDeleteInactivePlayerNum(int _DeleteInactivePlayerNum)
+    {
+        DeleteInactivePlayerNum = _DeleteInactivePlayerNum;
+    }
+    
+    // add 删除player数目
+    public void addDeleteInactivePlayerNum(int _DeleteInactivePlayerNum)
+    {
+        DeleteInactivePlayerNum += _DeleteInactivePlayerNum;
+    }
+    
+    // get 删除session数目
+    public int getDeleteInactiveSessionNum()
+    {
+        return DeleteInactiveSessionNum;
+    }
+    
+    // set 删除session数目
+    public void setDeleteInactiveSessionNum(int _DeleteInactiveSessionNum)
+    {
+        DeleteInactiveSessionNum = _DeleteInactiveSessionNum;
+    }
+    
+    // add 删除session数目
+    public void addDeleteInactiveSessionNum(int _DeleteInactiveSessionNum)
+    {
+        DeleteInactiveSessionNum += _DeleteInactiveSessionNum;
+    }
+    
+    // get 删除routine数目
+    public int getDeleteInactiveRoutineNum()
+    {
+        return DeleteInactiveRoutineNum;
+    }
+    
+    // set 删除routine数目
+    public void setDeleteInactiveRoutineNum(int _DeleteInactiveRoutineNum)
+    {
+        DeleteInactiveRoutineNum = _DeleteInactiveRoutineNum;
+    }
+    
+    // add 删除routine数目
+    public void addDeleteInactiveRoutineNum(int _DeleteInactiveRoutineNum)
+    {
+        DeleteInactiveRoutineNum += _DeleteInactiveRoutineNum;
+    }
+    
     // get 收包数目
     public int getRecvPacketNum()
     {
@@ -1126,6 +1189,15 @@ public class GameStatMgr
 		// 分到新桌数目
 		JoinNewNum = 0;
 		
+		// 删除player数目
+		DeleteInactivePlayerNum = 0;
+		
+		// 删除session数目
+		DeleteInactiveSessionNum = 0;
+		
+		// 删除routine数目
+		DeleteInactiveRoutineNum = 0;
+		
 		// 收包数目
 		RecvPacketNum = 0;
 		
@@ -1352,6 +1424,15 @@ public class GameStatMgr
 			
 			// 分到新桌数目
 			"JoinNewNum\t%d\t分到新桌数目\n" +
+			
+			// 删除player数目
+			"DeleteInactivePlayerNum\t%d\t删除player数目\n" +
+			
+			// 删除session数目
+			"DeleteInactiveSessionNum\t%d\t删除session数目\n" +
+			
+			// 删除routine数目
+			"DeleteInactiveRoutineNum\t%d\t删除routine数目\n" +
 			
 			// 收包数目
 			"RecvPacketNum\t%d\t收包数目\n" +
@@ -1718,6 +1799,15 @@ public class GameStatMgr
 			
 			// 分到新桌数目
 			, JoinNewNum
+			
+			// 删除player数目
+			, DeleteInactivePlayerNum
+			
+			// 删除session数目
+			, DeleteInactiveSessionNum
+			
+			// 删除routine数目
+			, DeleteInactiveRoutineNum
 			
 			// 收包数目
 			, RecvPacketNum

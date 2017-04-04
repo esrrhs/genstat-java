@@ -34,6 +34,10 @@
         <member name="JoinExistNum" comment="分到老桌数目"/>
         <member name="JoinNewNum" comment="分到新桌数目"/>
 		
+        <member name="DeleteInactivePlayerNum" comment="删除player数目"/>
+        <member name="DeleteInactiveSessionNum" comment="删除session数目"/>
+        <member name="DeleteInactiveRoutineNum" comment="删除routine数目"/>
+		
 		<array name="RoutineStateNum" comment="桌子各状态数目" length="10"/>
 		<array name="TableSeatsNum" comment="桌子各人数数目" length="6"/>
 		
