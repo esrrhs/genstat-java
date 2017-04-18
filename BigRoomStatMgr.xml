@@ -4,15 +4,18 @@
     <struct name="BigRoomStat" comment="bigroom统计结构">
         
         <member name="SessionNum" comment="Session数目"/>
-        <member name="ActiveSessionNum" comment="ActiveSession数目"/>
         <member name="PlayerNum" comment="玩家数目"/>
         <member name="ActivePlayerNum" comment="Active玩家数目"/>
         <member name="JoinNum" comment="join玩家数目"/>
         <member name="LeaveNum" comment="leave玩家数目"/>
         <member name="CallNum" comment="call玩家数目"/>
-				
+        <member name="KickNum" comment="kick玩家数目"/>
+        <member name="RejoinNum" comment="rejoin玩家数目"/>
+        <member name="SyncNum" comment="sync玩家数目"/>
+        <member name="SwapNum" comment="swap玩家数目"/>
 				
 		<array name="TablePlayerNum" comment="各个房间的玩家数目" length="2"/>
+		<array name="TableActivePlayerNum" comment="各个房间的Active玩家数目" length="2"/>
 		
         <member name="DeleteInactivePlayerNum" comment="删除player数目"/>
         <member name="DeleteInactiveSessionNum" comment="删除session数目"/>
