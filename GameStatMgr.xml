@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<result>
+
+    <struct name="GameStat" comment="gameserver统计结构">
+        
+        <member name="TableInfoMapNum" comment="桌子数目"/>
+        <member name="PlayerInfoMapNum" comment="桌子数目"/>
+        <member name="PlayerNum" comment="桌子上的玩家数目"/>
+        <member name="RoomInfoMapNum" comment="桌子数目"/>
+        <member name="RoutinesNum" comment="桌子数目"/>
+        <member name="UserIdToSessionIdNum" comment="桌子数目"/>
+				
+		<array name="RoomTableNum" comment="各个房间的桌子数目" length="30"/>
+				
+        <member name="BeginNum" comment="开局的桌子"/>
+        <member name="EndNum" comment="结算的桌子"/>
+        <member name="ExceptionNum" comment="异常的桌子"/>
+		
+        <member name="JoinNum" comment="请求分桌数目"/>
+        <member name="JoinFailNum" comment="分桌失败数目"/>
+        <member name="JoinMaxFailNum" comment="分桌多次失败的数目"/>
+        <member name="JoinNoInfoFailNum" comment="分桌无playerinfo失败的数目"/>
+        <member name="JoinDiffFailNum" comment="分桌不同设备失败的数目"/>
+        <member name="JoinNoRoutineFailNum" comment="分桌无routine失败的数目"/>
+        <member name="JoinChooseTableFailNum" comment="分桌失败的数目"/>
+        <member name="JoinChooseSeatFailNum" comment="分座位失败的数目"/>
+        <member name="JoinOffFailNum" comment="分桌关服失败的数目"/>
+        <member name="JoinTokenFailNum" comment="分桌校验失败的数目"/>
+        <member name="JoinCoinsFailNum" comment="分桌金币失败的数目"/>
+        <member name="JoinLockFailNum" comment="分桌锁定失败的数目"/>
+        <member name="JoinForbiddenFailNum" comment="分桌封禁失败的数目"/>
+        <member name="JoinCloseFailNum" comment="分桌关服失败的数目"/>
+		
+        <member name="JoinExistNum" comment="分到老桌数目"/>
+        <member name="JoinNewNum" comment="分到新桌数目"/>
+		
+        <member name="DeleteInactivePlayerNum" comment="删除player数目"/>
+        <member name="DeleteInactiveSessionNum" comment="删除session数目"/>
+        <member name="DeleteInactiveRoutineNum" comment="删除routine数目"/>
+		
+		<array name="RoutineStateNum" comment="桌子各状态数目" length="10"/>
+		<array name="TableSeatsNum" comment="桌子各人数数目" length="6"/>
+		
+        <member name="RecvPacketNum" comment="收包数目"/>
+        <member name="SendPacketNum" comment="发包数目"/>
+        <member name="RecvSizeNum" comment="收包流量"/>
+        <member name="SendSizeNum" comment="发包流量"/>
+        <member name="ProcessTime" comment="Top收包处理时间"/>
+		
+        <toparray name="TopRecvPacketNum" comment="Top收包数目" length="50" top="5"/>
+        <toparray name="TopSendPacketNum" comment="Top发包数目" length="50" top="5"/>
+        <toparray name="TopRecvSizeNum" comment="Top收包流量" length="50" top="5"/>
+        <toparray name="TopSendSizeNum" comment="Top发包流量" length="50" top="5"/>
+        <toparray name="TopProcessTime" comment="Top收包处理时间" length="50" top="5"/>
+		
+        <member name="AllSendPacketNum" comment="所有的发包数目"/>
+        <member name="AllSendSizeNum" comment="所有的发包流量"/>
+		
+        <toparray name="TopAllSendPacketNum" comment="Top所有的发包数目" length="20" top="5"/>
+        <toparray name="TopAllSendSizeNum" comment="Top所有的发包流量" length="20" top="5"/>
+        
+    </struct>
+    
+</result>
