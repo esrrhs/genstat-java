@@ -6,3 +6,7 @@ copy BigRoomStatMgr.xml stat.xml /Y
 genstat.exe
 move StatMgr.java BigRoomStatMgr.java
 
+copy DdzStatMgr.xml stat.xml /Y
+genstat.exe
+move StatMgr.java DdzStatMgr.java
+
