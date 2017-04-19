@@ -47,17 +47,17 @@
         <member name="SendSizeNum" comment="发包流量"/>
         <member name="ProcessTime" comment="Top收包处理时间"/>
 		
-        <toparray name="TopRecvPacketNum" comment="Top收包数目" length="50" top="5"/>
-        <toparray name="TopSendPacketNum" comment="Top发包数目" length="50" top="5"/>
-        <toparray name="TopRecvSizeNum" comment="Top收包流量" length="50" top="5"/>
-        <toparray name="TopSendSizeNum" comment="Top发包流量" length="50" top="5"/>
-        <toparray name="TopProcessTime" comment="Top收包处理时间" length="50" top="5"/>
+        <toparray name="TopRecvPacketNum" comment="Top收包数目" length="100" top="5"/>
+        <toparray name="TopSendPacketNum" comment="Top发包数目" length="100" top="5"/>
+        <toparray name="TopRecvSizeNum" comment="Top收包流量" length="100" top="5"/>
+        <toparray name="TopSendSizeNum" comment="Top发包流量" length="100" top="5"/>
+        <toparray name="TopProcessTime" comment="Top收包处理时间" length="100" top="5"/>
 		
         <member name="AllSendPacketNum" comment="所有的发包数目"/>
         <member name="AllSendSizeNum" comment="所有的发包流量"/>
 		
-        <toparray name="TopAllSendPacketNum" comment="Top所有的发包数目" length="20" top="5"/>
-        <toparray name="TopAllSendSizeNum" comment="Top所有的发包流量" length="20" top="5"/>
+        <toparray name="TopAllSendPacketNum" comment="Top所有的发包数目" length="200" top="5"/>
+        <toparray name="TopAllSendSizeNum" comment="Top所有的发包流量" length="200" top="5"/>
         
     </struct>
     

@@ -13,11 +13,15 @@
         <member name="TotalFPS" comment="fps数目"/>
 		<array name="FPS" comment="各个线程的fps数目" length="100"/>
 		
-        <member name="NewTableNum" comment="开局的桌子"/>
-        <member name="DestroyTableNum" comment="结算的桌子"/>
+        <member name="NewTableNum" comment="创建的桌子"/>
+        <member name="NewTableFailNum" comment="创建的桌子"/>
+        <member name="NewTableOKNum" comment="创建的桌子"/>
+        <member name="InitTableNum" comment="开局的桌子"/>
+        <member name="EndTableNum" comment="结算的桌子"/>
+        <member name="DestroyTableNum" comment="销毁的桌子"/>
         <member name="ExceptionTableNum" comment="异常的桌子"/>
 		
-		<array name="RoutineStateNum" comment="桌子各状态数目" length="11"/>
+		<array name="TableStateNum" comment="桌子各状态数目" length="11"/>
 		
         <member name="RecvPacketNum" comment="收包数目"/>
         <member name="SendPacketNum" comment="发包数目"/>
@@ -25,11 +29,11 @@
         <member name="SendSizeNum" comment="发包流量"/>
         <member name="ProcessTime" comment="Top收包处理时间"/>
 		
-        <toparray name="TopRecvPacketNum" comment="Top收包数目" length="50" top="5"/>
-        <toparray name="TopSendPacketNum" comment="Top发包数目" length="50" top="5"/>
-        <toparray name="TopRecvSizeNum" comment="Top收包流量" length="50" top="5"/>
-        <toparray name="TopSendSizeNum" comment="Top发包流量" length="50" top="5"/>
-        <toparray name="TopProcessTime" comment="Top收包处理时间" length="50" top="5"/>
+        <toparray name="TopRecvPacketNum" comment="Top收包数目" length="200" top="5"/>
+        <toparray name="TopSendPacketNum" comment="Top发包数目" length="200" top="5"/>
+        <toparray name="TopRecvSizeNum" comment="Top收包流量" length="200" top="5"/>
+        <toparray name="TopSendSizeNum" comment="Top发包流量" length="200" top="5"/>
+        <toparray name="TopProcessTime" comment="Top收包处理时间" length="200" top="5"/>
 		
     </struct>
     
