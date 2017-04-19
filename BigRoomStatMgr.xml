@@ -13,6 +13,18 @@
         <member name="RejoinNum" comment="rejoin玩家数目"/>
         <member name="SyncNum" comment="sync玩家数目"/>
         <member name="SwapNum" comment="swap玩家数目"/>
+        <member name="RefreshCoinNum" comment="RefreshCoin玩家数目"/>
+        <member name="TalkNum" comment="Talk玩家数目"/>
+        <member name="ItemNum" comment="Item玩家数目"/>
+        <member name="BuyItemNum" comment="BuyItem玩家数目"/>
+        <member name="SkillNum" comment="Skill玩家数目"/>
+        <member name="ReliefNum" comment="Relief玩家数目"/>
+        <member name="HBNum" comment="HB玩家数目"/>
+        <member name="CloseNum" comment="Close玩家数目"/>
+		
+        <member name="NewSessionNum" comment="newSession玩家数目"/>		
+        <member name="NewSessionOldNum" comment="newSession old玩家数目"/>
+        <member name="NewSessionNewNum" comment="newSession new玩家数目"/>
 				
 		<array name="TablePlayerNum" comment="各个房间的玩家数目" length="2"/>
 		<array name="TableActivePlayerNum" comment="各个房间的Active玩家数目" length="2"/>

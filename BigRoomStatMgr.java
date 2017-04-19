@@ -49,6 +49,39 @@ public class BigRoomStatMgr
     // swap玩家数目
     private int SwapNum;
     
+    // RefreshCoin玩家数目
+    private int RefreshCoinNum;
+    
+    // Talk玩家数目
+    private int TalkNum;
+    
+    // Item玩家数目
+    private int ItemNum;
+    
+    // BuyItem玩家数目
+    private int BuyItemNum;
+    
+    // Skill玩家数目
+    private int SkillNum;
+    
+    // Relief玩家数目
+    private int ReliefNum;
+    
+    // HB玩家数目
+    private int HBNum;
+    
+    // Close玩家数目
+    private int CloseNum;
+    
+    // newSession玩家数目
+    private int NewSessionNum;
+    
+    // newSession old玩家数目
+    private int NewSessionOldNum;
+    
+    // newSession new玩家数目
+    private int NewSessionNewNum;
+    
     // 删除player数目
     private int DeleteInactivePlayerNum;
     
@@ -391,6 +424,204 @@ public class BigRoomStatMgr
         SwapNum += _SwapNum;
     }
     
+    // get RefreshCoin玩家数目
+    public int getRefreshCoinNum()
+    {
+        return RefreshCoinNum;
+    }
+    
+    // set RefreshCoin玩家数目
+    public void setRefreshCoinNum(int _RefreshCoinNum)
+    {
+        RefreshCoinNum = _RefreshCoinNum;
+    }
+    
+    // add RefreshCoin玩家数目
+    public void addRefreshCoinNum(int _RefreshCoinNum)
+    {
+        RefreshCoinNum += _RefreshCoinNum;
+    }
+    
+    // get Talk玩家数目
+    public int getTalkNum()
+    {
+        return TalkNum;
+    }
+    
+    // set Talk玩家数目
+    public void setTalkNum(int _TalkNum)
+    {
+        TalkNum = _TalkNum;
+    }
+    
+    // add Talk玩家数目
+    public void addTalkNum(int _TalkNum)
+    {
+        TalkNum += _TalkNum;
+    }
+    
+    // get Item玩家数目
+    public int getItemNum()
+    {
+        return ItemNum;
+    }
+    
+    // set Item玩家数目
+    public void setItemNum(int _ItemNum)
+    {
+        ItemNum = _ItemNum;
+    }
+    
+    // add Item玩家数目
+    public void addItemNum(int _ItemNum)
+    {
+        ItemNum += _ItemNum;
+    }
+    
+    // get BuyItem玩家数目
+    public int getBuyItemNum()
+    {
+        return BuyItemNum;
+    }
+    
+    // set BuyItem玩家数目
+    public void setBuyItemNum(int _BuyItemNum)
+    {
+        BuyItemNum = _BuyItemNum;
+    }
+    
+    // add BuyItem玩家数目
+    public void addBuyItemNum(int _BuyItemNum)
+    {
+        BuyItemNum += _BuyItemNum;
+    }
+    
+    // get Skill玩家数目
+    public int getSkillNum()
+    {
+        return SkillNum;
+    }
+    
+    // set Skill玩家数目
+    public void setSkillNum(int _SkillNum)
+    {
+        SkillNum = _SkillNum;
+    }
+    
+    // add Skill玩家数目
+    public void addSkillNum(int _SkillNum)
+    {
+        SkillNum += _SkillNum;
+    }
+    
+    // get Relief玩家数目
+    public int getReliefNum()
+    {
+        return ReliefNum;
+    }
+    
+    // set Relief玩家数目
+    public void setReliefNum(int _ReliefNum)
+    {
+        ReliefNum = _ReliefNum;
+    }
+    
+    // add Relief玩家数目
+    public void addReliefNum(int _ReliefNum)
+    {
+        ReliefNum += _ReliefNum;
+    }
+    
+    // get HB玩家数目
+    public int getHBNum()
+    {
+        return HBNum;
+    }
+    
+    // set HB玩家数目
+    public void setHBNum(int _HBNum)
+    {
+        HBNum = _HBNum;
+    }
+    
+    // add HB玩家数目
+    public void addHBNum(int _HBNum)
+    {
+        HBNum += _HBNum;
+    }
+    
+    // get Close玩家数目
+    public int getCloseNum()
+    {
+        return CloseNum;
+    }
+    
+    // set Close玩家数目
+    public void setCloseNum(int _CloseNum)
+    {
+        CloseNum = _CloseNum;
+    }
+    
+    // add Close玩家数目
+    public void addCloseNum(int _CloseNum)
+    {
+        CloseNum += _CloseNum;
+    }
+    
+    // get newSession玩家数目
+    public int getNewSessionNum()
+    {
+        return NewSessionNum;
+    }
+    
+    // set newSession玩家数目
+    public void setNewSessionNum(int _NewSessionNum)
+    {
+        NewSessionNum = _NewSessionNum;
+    }
+    
+    // add newSession玩家数目
+    public void addNewSessionNum(int _NewSessionNum)
+    {
+        NewSessionNum += _NewSessionNum;
+    }
+    
+    // get newSession old玩家数目
+    public int getNewSessionOldNum()
+    {
+        return NewSessionOldNum;
+    }
+    
+    // set newSession old玩家数目
+    public void setNewSessionOldNum(int _NewSessionOldNum)
+    {
+        NewSessionOldNum = _NewSessionOldNum;
+    }
+    
+    // add newSession old玩家数目
+    public void addNewSessionOldNum(int _NewSessionOldNum)
+    {
+        NewSessionOldNum += _NewSessionOldNum;
+    }
+    
+    // get newSession new玩家数目
+    public int getNewSessionNewNum()
+    {
+        return NewSessionNewNum;
+    }
+    
+    // set newSession new玩家数目
+    public void setNewSessionNewNum(int _NewSessionNewNum)
+    {
+        NewSessionNewNum = _NewSessionNewNum;
+    }
+    
+    // add newSession new玩家数目
+    public void addNewSessionNewNum(int _NewSessionNewNum)
+    {
+        NewSessionNewNum += _NewSessionNewNum;
+    }
+    
     // get 删除player数目
     public int getDeleteInactivePlayerNum()
     {
@@ -697,6 +928,39 @@ public class BigRoomStatMgr
 		// swap玩家数目
 		SwapNum = 0;
 		
+		// RefreshCoin玩家数目
+		RefreshCoinNum = 0;
+		
+		// Talk玩家数目
+		TalkNum = 0;
+		
+		// Item玩家数目
+		ItemNum = 0;
+		
+		// BuyItem玩家数目
+		BuyItemNum = 0;
+		
+		// Skill玩家数目
+		SkillNum = 0;
+		
+		// Relief玩家数目
+		ReliefNum = 0;
+		
+		// HB玩家数目
+		HBNum = 0;
+		
+		// Close玩家数目
+		CloseNum = 0;
+		
+		// newSession玩家数目
+		NewSessionNum = 0;
+		
+		// newSession old玩家数目
+		NewSessionOldNum = 0;
+		
+		// newSession new玩家数目
+		NewSessionNewNum = 0;
+		
 		// 删除player数目
 		DeleteInactivePlayerNum = 0;
 		
@@ -850,6 +1114,39 @@ public class BigRoomStatMgr
 			
 			// swap玩家数目
 			"SwapNum\t%d\tswap玩家数目\n" +
+			
+			// RefreshCoin玩家数目
+			"RefreshCoinNum\t%d\tRefreshCoin玩家数目\n" +
+			
+			// Talk玩家数目
+			"TalkNum\t%d\tTalk玩家数目\n" +
+			
+			// Item玩家数目
+			"ItemNum\t%d\tItem玩家数目\n" +
+			
+			// BuyItem玩家数目
+			"BuyItemNum\t%d\tBuyItem玩家数目\n" +
+			
+			// Skill玩家数目
+			"SkillNum\t%d\tSkill玩家数目\n" +
+			
+			// Relief玩家数目
+			"ReliefNum\t%d\tRelief玩家数目\n" +
+			
+			// HB玩家数目
+			"HBNum\t%d\tHB玩家数目\n" +
+			
+			// Close玩家数目
+			"CloseNum\t%d\tClose玩家数目\n" +
+			
+			// newSession玩家数目
+			"NewSessionNum\t%d\tnewSession玩家数目\n" +
+			
+			// newSession old玩家数目
+			"NewSessionOldNum\t%d\tnewSession old玩家数目\n" +
+			
+			// newSession new玩家数目
+			"NewSessionNewNum\t%d\tnewSession new玩家数目\n" +
 			
 			// 删除player数目
 			"DeleteInactivePlayerNum\t%d\t删除player数目\n" +
@@ -1009,6 +1306,39 @@ public class BigRoomStatMgr
 			
 			// swap玩家数目
 			, SwapNum
+			
+			// RefreshCoin玩家数目
+			, RefreshCoinNum
+			
+			// Talk玩家数目
+			, TalkNum
+			
+			// Item玩家数目
+			, ItemNum
+			
+			// BuyItem玩家数目
+			, BuyItemNum
+			
+			// Skill玩家数目
+			, SkillNum
+			
+			// Relief玩家数目
+			, ReliefNum
+			
+			// HB玩家数目
+			, HBNum
+			
+			// Close玩家数目
+			, CloseNum
+			
+			// newSession玩家数目
+			, NewSessionNum
+			
+			// newSession old玩家数目
+			, NewSessionOldNum
+			
+			// newSession new玩家数目
+			, NewSessionNewNum
 			
 			// 删除player数目
 			, DeleteInactivePlayerNum
