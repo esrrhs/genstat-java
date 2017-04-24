@@ -10,3 +10,6 @@ copy DdzStatMgr.xml stat.xml /Y
 genstat.exe
 move StatMgr.java DdzStatMgr.java
 
+copy BlackJackStatMgr.xml stat.xml /Y
+genstat.exe
+move StatMgr.java BlackJackStatMgr.java
