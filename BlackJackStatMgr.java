@@ -13,10 +13,10 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
   
-// ddzserver统计结构
-public class DdzStatMgr
+// blackjackserver统计结构
+public class BlackJackStatMgr
 {
-	private static DdzStatMgr instance;
+	private static BlackJackStatMgr instance;
 	
     
     // 桌子数目
@@ -140,21 +140,21 @@ public class DdzStatMgr
         
         
 	
-	// ddzserver统计结构
-    public DdzStatMgr()
+	// blackjackserver统计结构
+    public BlackJackStatMgr()
 	{
 		clear();
 	}
 	
-	public static DdzStatMgr instance()
+	public static BlackJackStatMgr instance()
 	{
 		if (instance == null)
 		{
-			synchronized (DdzStatMgr.class)
+			synchronized (BlackJackStatMgr.class)
 			{
 				if (instance == null)
 				{
-					instance = new DdzStatMgr();
+					instance = new BlackJackStatMgr();
 					return instance;
 				}
 			}

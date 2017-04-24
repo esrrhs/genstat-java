@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <result>
 
-    <struct name="DdzStat" comment="ddzserver统计结构">
+    <struct name="BlackJackStat" comment="blackjackserver统计结构">
         
         <member name="TotalTableNum" comment="桌子数目"/>
 		<array name="TableNum" comment="各个线程的桌子数目" length="100"/>
