@@ -25,6 +25,12 @@ public class DdzStatMgr
     // 桌子上的玩家数目
     private int TotalPlayerNum;
     
+    // 桌子上的机器人数目
+    private int TotalRobotPlayerNum;
+    
+    // 桌子上的机器人输赢
+    private int TotalRobotWinCoin;
+    
     // fps数目
     private int TotalFPS;
     
@@ -248,6 +254,42 @@ public class DdzStatMgr
     public void addTotalPlayerNum(int _TotalPlayerNum)
     {
         TotalPlayerNum += _TotalPlayerNum;
+    }
+    
+    // get 桌子上的机器人数目
+    public int getTotalRobotPlayerNum()
+    {
+        return TotalRobotPlayerNum;
+    }
+    
+    // set 桌子上的机器人数目
+    public void setTotalRobotPlayerNum(int _TotalRobotPlayerNum)
+    {
+        TotalRobotPlayerNum = _TotalRobotPlayerNum;
+    }
+    
+    // add 桌子上的机器人数目
+    public void addTotalRobotPlayerNum(int _TotalRobotPlayerNum)
+    {
+        TotalRobotPlayerNum += _TotalRobotPlayerNum;
+    }
+    
+    // get 桌子上的机器人输赢
+    public int getTotalRobotWinCoin()
+    {
+        return TotalRobotWinCoin;
+    }
+    
+    // set 桌子上的机器人输赢
+    public void setTotalRobotWinCoin(int _TotalRobotWinCoin)
+    {
+        TotalRobotWinCoin = _TotalRobotWinCoin;
+    }
+    
+    // add 桌子上的机器人输赢
+    public void addTotalRobotWinCoin(int _TotalRobotWinCoin)
+    {
+        TotalRobotWinCoin += _TotalRobotWinCoin;
     }
     
     // get fps数目
@@ -700,6 +742,12 @@ public class DdzStatMgr
 		// 桌子上的玩家数目
 		TotalPlayerNum = 0;
 		
+		// 桌子上的机器人数目
+		TotalRobotPlayerNum = 0;
+		
+		// 桌子上的机器人输赢
+		TotalRobotWinCoin = 0;
+		
 		// fps数目
 		TotalFPS = 0;
 		
@@ -865,6 +913,12 @@ public class DdzStatMgr
 			
 			// 桌子上的玩家数目
 			"TotalPlayerNum\t%d\t桌子上的玩家数目\n" +
+			
+			// 桌子上的机器人数目
+			"TotalRobotPlayerNum\t%d\t桌子上的机器人数目\n" +
+			
+			// 桌子上的机器人输赢
+			"TotalRobotWinCoin\t%d\t桌子上的机器人输赢\n" +
 			
 			// fps数目
 			"TotalFPS\t%d\tfps数目\n" +
@@ -1954,6 +2008,12 @@ public class DdzStatMgr
 			
 			// 桌子上的玩家数目
 			, TotalPlayerNum
+			
+			// 桌子上的机器人数目
+			, TotalRobotPlayerNum
+			
+			// 桌子上的机器人输赢
+			, TotalRobotWinCoin
 			
 			// fps数目
 			, TotalFPS

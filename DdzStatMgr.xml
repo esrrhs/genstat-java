@@ -8,6 +8,8 @@
 		<array name="RoomTableNum" comment="各个房间的桌子数目" length="3"/>
 		
         <member name="TotalPlayerNum" comment="桌子上的玩家数目"/>
+        <member name="TotalRobotPlayerNum" comment="桌子上的机器人数目"/>
+        <member name="TotalRobotWinCoin" comment="桌子上的机器人输赢"/>
 		<array name="PlayerNum" comment="各个线程的玩家数目" length="100"/>
 		
         <member name="TotalFPS" comment="fps数目"/>
