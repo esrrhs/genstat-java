@@ -4,6 +4,7 @@
     <struct name="BlackJackStat" comment="blackjackserver统计结构">
         
         <member name="TotalTableNum" comment="桌子数目"/>
+        <member name="MasterTableNum" comment="玩家庄家的桌子数目"/>
         <member name="ActiveTableNum" comment="活跃桌子数目"/>
         <member name="HideTableNum" comment="隐藏的桌子数目"/>
 		<array name="RoomTableNum" comment="各个房间的桌子数目" length="3"/>
@@ -39,7 +40,6 @@
         <member name="InitTableNum" comment="开局的桌子"/>
         <member name="EndTableNum" comment="结算的桌子"/>
         <member name="DestroyTableNum" comment="销毁的桌子"/>
-        <member name="ExceptionTableNum" comment="异常的桌子"/>
 		
 		<array name="TableStateNum" comment="桌子各状态数目" length="11"/>
 		

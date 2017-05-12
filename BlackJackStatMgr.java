@@ -22,6 +22,9 @@ public class BlackJackStatMgr
     // 桌子数目
     private int TotalTableNum;
     
+    // 玩家庄家的桌子数目
+    private int MasterTableNum;
+    
     // 活跃桌子数目
     private int ActiveTableNum;
     
@@ -99,9 +102,6 @@ public class BlackJackStatMgr
     
     // 销毁的桌子
     private int DestroyTableNum;
-    
-    // 异常的桌子
-    private int ExceptionTableNum;
     
     // 收包数目
     private int RecvPacketNum;
@@ -287,6 +287,24 @@ public class BlackJackStatMgr
     public void addTotalTableNum(int _TotalTableNum)
     {
         TotalTableNum += _TotalTableNum;
+    }
+    
+    // get 玩家庄家的桌子数目
+    public int getMasterTableNum()
+    {
+        return MasterTableNum;
+    }
+    
+    // set 玩家庄家的桌子数目
+    public void setMasterTableNum(int _MasterTableNum)
+    {
+        MasterTableNum = _MasterTableNum;
+    }
+    
+    // add 玩家庄家的桌子数目
+    public void addMasterTableNum(int _MasterTableNum)
+    {
+        MasterTableNum += _MasterTableNum;
     }
     
     // get 活跃桌子数目
@@ -757,24 +775,6 @@ public class BlackJackStatMgr
         DestroyTableNum += _DestroyTableNum;
     }
     
-    // get 异常的桌子
-    public int getExceptionTableNum()
-    {
-        return ExceptionTableNum;
-    }
-    
-    // set 异常的桌子
-    public void setExceptionTableNum(int _ExceptionTableNum)
-    {
-        ExceptionTableNum = _ExceptionTableNum;
-    }
-    
-    // add 异常的桌子
-    public void addExceptionTableNum(int _ExceptionTableNum)
-    {
-        ExceptionTableNum += _ExceptionTableNum;
-    }
-    
     // get 收包数目
     public int getRecvPacketNum()
     {
@@ -1098,6 +1098,9 @@ public class BlackJackStatMgr
 		// 桌子数目
 		TotalTableNum = 0;
 		
+		// 玩家庄家的桌子数目
+		MasterTableNum = 0;
+		
 		// 活跃桌子数目
 		ActiveTableNum = 0;
 		
@@ -1175,9 +1178,6 @@ public class BlackJackStatMgr
 		
 		// 销毁的桌子
 		DestroyTableNum = 0;
-		
-		// 异常的桌子
-		ExceptionTableNum = 0;
 		
 		// 收包数目
 		RecvPacketNum = 0;
@@ -1324,6 +1324,9 @@ public class BlackJackStatMgr
 			// 桌子数目
 			"TotalTableNum\t%d\t桌子数目\n" +
 			
+			// 玩家庄家的桌子数目
+			"MasterTableNum\t%d\t玩家庄家的桌子数目\n" +
+			
 			// 活跃桌子数目
 			"ActiveTableNum\t%d\t活跃桌子数目\n" +
 			
@@ -1401,9 +1404,6 @@ public class BlackJackStatMgr
 			
 			// 销毁的桌子
 			"DestroyTableNum\t%d\t销毁的桌子\n" +
-			
-			// 异常的桌子
-			"ExceptionTableNum\t%d\t异常的桌子\n" +
 			
 			// 收包数目
 			"RecvPacketNum\t%d\t收包数目\n" +
@@ -1905,6 +1905,9 @@ public class BlackJackStatMgr
 			// 桌子数目
 			, TotalTableNum
 			
+			// 玩家庄家的桌子数目
+			, MasterTableNum
+			
 			// 活跃桌子数目
 			, ActiveTableNum
 			
@@ -1982,9 +1985,6 @@ public class BlackJackStatMgr
 			
 			// 销毁的桌子
 			, DestroyTableNum
-			
-			// 异常的桌子
-			, ExceptionTableNum
 			
 			// 收包数目
 			, RecvPacketNum
