@@ -4,16 +4,22 @@
     <struct name="BlackJackStat" comment="blackjackserver统计结构">
         
         <member name="TotalTableNum" comment="桌子数目"/>
-		<array name="TableNum" comment="各个线程的桌子数目" length="100"/>
+        <member name="ActiveTableNum" comment="活跃桌子数目"/>
+        <member name="HideTableNum" comment="隐藏的桌子数目"/>
 		<array name="RoomTableNum" comment="各个房间的桌子数目" length="3"/>
 		
         <member name="TotalPlayerNum" comment="桌子上的玩家数目"/>
-		<array name="PlayerNum" comment="各个线程的玩家数目" length="100"/>
+		<array name="RoomPlayerNum" comment="各个房间的玩家数目" length="3"/>
+		<array name="TablePlayerNum" comment="桌子人数的玩家分布" length="6"/>
+        <member name="TotalWatchingPlayerNum" comment="桌子上的观战玩家数目"/>
+		<array name="RoomWatchingPlayerNum" comment="各个房间的观战玩家数目" length="3"/>
 		
         <member name="TotalFPS" comment="fps数目"/>
 		<array name="FPS" comment="各个线程的fps数目" length="100"/>
 		
         <member name="JoinNum" comment="请求分桌数目"/>
+        <member name="JoinQuickNum" comment="快速请求分桌数目"/>
+        <member name="JoinClickNum" comment="手动请求分桌数目"/>
         <member name="JoinFailNum" comment="分桌失败数目"/>
         <member name="JoinMaxFailNum" comment="分桌多次失败的数目"/>
         <member name="JoinNoInfoFailNum" comment="分桌无playerinfo失败的数目"/>
@@ -30,12 +36,9 @@
         <member name="JoinVIPFailNum" comment="分桌vip失败的数目"/>
 		
         <member name="NewTableNum" comment="创建的桌子"/>
-        <member name="NewTableFailNum" comment="创建的桌子"/>
-        <member name="NewTableOKNum" comment="创建的桌子"/>
         <member name="InitTableNum" comment="开局的桌子"/>
         <member name="EndTableNum" comment="结算的桌子"/>
         <member name="DestroyTableNum" comment="销毁的桌子"/>
-        <member name="ExceptionTableNum" comment="异常的桌子"/>
 		
 		<array name="TableStateNum" comment="桌子各状态数目" length="11"/>
 		

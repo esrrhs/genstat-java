@@ -22,14 +22,29 @@ public class BlackJackStatMgr
     // 桌子数目
     private int TotalTableNum;
     
+    // 活跃桌子数目
+    private int ActiveTableNum;
+    
+    // 隐藏的桌子数目
+    private int HideTableNum;
+    
     // 桌子上的玩家数目
     private int TotalPlayerNum;
+    
+    // 桌子上的观战玩家数目
+    private int TotalWatchingPlayerNum;
     
     // fps数目
     private int TotalFPS;
     
     // 请求分桌数目
     private int JoinNum;
+    
+    // 快速请求分桌数目
+    private int JoinQuickNum;
+    
+    // 手动请求分桌数目
+    private int JoinClickNum;
     
     // 分桌失败数目
     private int JoinFailNum;
@@ -76,12 +91,6 @@ public class BlackJackStatMgr
     // 创建的桌子
     private int NewTableNum;
     
-    // 创建的桌子
-    private int NewTableFailNum;
-    
-    // 创建的桌子
-    private int NewTableOKNum;
-    
     // 开局的桌子
     private int InitTableNum;
     
@@ -110,14 +119,17 @@ public class BlackJackStatMgr
     private int ProcessTime;
     
     
-    // 各个线程的桌子数目
-    private int[] TableNum = new int[100];
-    
     // 各个房间的桌子数目
     private int[] RoomTableNum = new int[3];
     
-    // 各个线程的玩家数目
-    private int[] PlayerNum = new int[100];
+    // 各个房间的玩家数目
+    private int[] RoomPlayerNum = new int[3];
+    
+    // 桌子人数的玩家分布
+    private int[] TablePlayerNum = new int[6];
+    
+    // 各个房间的观战玩家数目
+    private int[] RoomWatchingPlayerNum = new int[3];
     
     // 各个线程的fps数目
     private int[] FPS = new int[100];
@@ -277,6 +289,42 @@ public class BlackJackStatMgr
         TotalTableNum += _TotalTableNum;
     }
     
+    // get 活跃桌子数目
+    public int getActiveTableNum()
+    {
+        return ActiveTableNum;
+    }
+    
+    // set 活跃桌子数目
+    public void setActiveTableNum(int _ActiveTableNum)
+    {
+        ActiveTableNum = _ActiveTableNum;
+    }
+    
+    // add 活跃桌子数目
+    public void addActiveTableNum(int _ActiveTableNum)
+    {
+        ActiveTableNum += _ActiveTableNum;
+    }
+    
+    // get 隐藏的桌子数目
+    public int getHideTableNum()
+    {
+        return HideTableNum;
+    }
+    
+    // set 隐藏的桌子数目
+    public void setHideTableNum(int _HideTableNum)
+    {
+        HideTableNum = _HideTableNum;
+    }
+    
+    // add 隐藏的桌子数目
+    public void addHideTableNum(int _HideTableNum)
+    {
+        HideTableNum += _HideTableNum;
+    }
+    
     // get 桌子上的玩家数目
     public int getTotalPlayerNum()
     {
@@ -293,6 +341,24 @@ public class BlackJackStatMgr
     public void addTotalPlayerNum(int _TotalPlayerNum)
     {
         TotalPlayerNum += _TotalPlayerNum;
+    }
+    
+    // get 桌子上的观战玩家数目
+    public int getTotalWatchingPlayerNum()
+    {
+        return TotalWatchingPlayerNum;
+    }
+    
+    // set 桌子上的观战玩家数目
+    public void setTotalWatchingPlayerNum(int _TotalWatchingPlayerNum)
+    {
+        TotalWatchingPlayerNum = _TotalWatchingPlayerNum;
+    }
+    
+    // add 桌子上的观战玩家数目
+    public void addTotalWatchingPlayerNum(int _TotalWatchingPlayerNum)
+    {
+        TotalWatchingPlayerNum += _TotalWatchingPlayerNum;
     }
     
     // get fps数目
@@ -329,6 +395,42 @@ public class BlackJackStatMgr
     public void addJoinNum(int _JoinNum)
     {
         JoinNum += _JoinNum;
+    }
+    
+    // get 快速请求分桌数目
+    public int getJoinQuickNum()
+    {
+        return JoinQuickNum;
+    }
+    
+    // set 快速请求分桌数目
+    public void setJoinQuickNum(int _JoinQuickNum)
+    {
+        JoinQuickNum = _JoinQuickNum;
+    }
+    
+    // add 快速请求分桌数目
+    public void addJoinQuickNum(int _JoinQuickNum)
+    {
+        JoinQuickNum += _JoinQuickNum;
+    }
+    
+    // get 手动请求分桌数目
+    public int getJoinClickNum()
+    {
+        return JoinClickNum;
+    }
+    
+    // set 手动请求分桌数目
+    public void setJoinClickNum(int _JoinClickNum)
+    {
+        JoinClickNum = _JoinClickNum;
+    }
+    
+    // add 手动请求分桌数目
+    public void addJoinClickNum(int _JoinClickNum)
+    {
+        JoinClickNum += _JoinClickNum;
     }
     
     // get 分桌失败数目
@@ -601,42 +703,6 @@ public class BlackJackStatMgr
         NewTableNum += _NewTableNum;
     }
     
-    // get 创建的桌子
-    public int getNewTableFailNum()
-    {
-        return NewTableFailNum;
-    }
-    
-    // set 创建的桌子
-    public void setNewTableFailNum(int _NewTableFailNum)
-    {
-        NewTableFailNum = _NewTableFailNum;
-    }
-    
-    // add 创建的桌子
-    public void addNewTableFailNum(int _NewTableFailNum)
-    {
-        NewTableFailNum += _NewTableFailNum;
-    }
-    
-    // get 创建的桌子
-    public int getNewTableOKNum()
-    {
-        return NewTableOKNum;
-    }
-    
-    // set 创建的桌子
-    public void setNewTableOKNum(int _NewTableOKNum)
-    {
-        NewTableOKNum = _NewTableOKNum;
-    }
-    
-    // add 创建的桌子
-    public void addNewTableOKNum(int _NewTableOKNum)
-    {
-        NewTableOKNum += _NewTableOKNum;
-    }
-    
     // get 开局的桌子
     public int getInitTableNum()
     {
@@ -801,26 +867,6 @@ public class BlackJackStatMgr
     
     
          
-	// set 各个线程的桌子数目
-    public void setTableNum(int index, int _TableNum)
-    {
-		if (index >= 100 || index < 0)
-        {
-            return;
-        }
-        TableNum[index] += _TableNum;
-    }
-	
-    // add 各个线程的桌子数目
-    public void addTableNum(int index, int _TableNum)
-    {
-        if (index >= 100 || index < 0)
-        {
-            return;
-        }
-        TableNum[index] += _TableNum;
-    }
-         
 	// set 各个房间的桌子数目
     public void setRoomTableNum(int index, int _RoomTableNum)
     {
@@ -841,24 +887,64 @@ public class BlackJackStatMgr
         RoomTableNum[index] += _RoomTableNum;
     }
          
-	// set 各个线程的玩家数目
-    public void setPlayerNum(int index, int _PlayerNum)
+	// set 各个房间的玩家数目
+    public void setRoomPlayerNum(int index, int _RoomPlayerNum)
     {
-		if (index >= 100 || index < 0)
+		if (index >= 3 || index < 0)
         {
             return;
         }
-        PlayerNum[index] += _PlayerNum;
+        RoomPlayerNum[index] += _RoomPlayerNum;
     }
 	
-    // add 各个线程的玩家数目
-    public void addPlayerNum(int index, int _PlayerNum)
+    // add 各个房间的玩家数目
+    public void addRoomPlayerNum(int index, int _RoomPlayerNum)
     {
-        if (index >= 100 || index < 0)
+        if (index >= 3 || index < 0)
         {
             return;
         }
-        PlayerNum[index] += _PlayerNum;
+        RoomPlayerNum[index] += _RoomPlayerNum;
+    }
+         
+	// set 桌子人数的玩家分布
+    public void setTablePlayerNum(int index, int _TablePlayerNum)
+    {
+		if (index >= 6 || index < 0)
+        {
+            return;
+        }
+        TablePlayerNum[index] += _TablePlayerNum;
+    }
+	
+    // add 桌子人数的玩家分布
+    public void addTablePlayerNum(int index, int _TablePlayerNum)
+    {
+        if (index >= 6 || index < 0)
+        {
+            return;
+        }
+        TablePlayerNum[index] += _TablePlayerNum;
+    }
+         
+	// set 各个房间的观战玩家数目
+    public void setRoomWatchingPlayerNum(int index, int _RoomWatchingPlayerNum)
+    {
+		if (index >= 3 || index < 0)
+        {
+            return;
+        }
+        RoomWatchingPlayerNum[index] += _RoomWatchingPlayerNum;
+    }
+	
+    // add 各个房间的观战玩家数目
+    public void addRoomWatchingPlayerNum(int index, int _RoomWatchingPlayerNum)
+    {
+        if (index >= 3 || index < 0)
+        {
+            return;
+        }
+        RoomWatchingPlayerNum[index] += _RoomWatchingPlayerNum;
     }
          
 	// set 各个线程的fps数目
@@ -1012,14 +1098,29 @@ public class BlackJackStatMgr
 		// 桌子数目
 		TotalTableNum = 0;
 		
+		// 活跃桌子数目
+		ActiveTableNum = 0;
+		
+		// 隐藏的桌子数目
+		HideTableNum = 0;
+		
 		// 桌子上的玩家数目
 		TotalPlayerNum = 0;
+		
+		// 桌子上的观战玩家数目
+		TotalWatchingPlayerNum = 0;
 		
 		// fps数目
 		TotalFPS = 0;
 		
 		// 请求分桌数目
 		JoinNum = 0;
+		
+		// 快速请求分桌数目
+		JoinQuickNum = 0;
+		
+		// 手动请求分桌数目
+		JoinClickNum = 0;
 		
 		// 分桌失败数目
 		JoinFailNum = 0;
@@ -1066,12 +1167,6 @@ public class BlackJackStatMgr
 		// 创建的桌子
 		NewTableNum = 0;
 		
-		// 创建的桌子
-		NewTableFailNum = 0;
-		
-		// 创建的桌子
-		NewTableOKNum = 0;
-		
 		// 开局的桌子
 		InitTableNum = 0;
 		
@@ -1100,22 +1195,28 @@ public class BlackJackStatMgr
 		ProcessTime = 0;
 		
 		
-		// 各个线程的桌子数目
-		for (int i = 0; i < TableNum.length; i++)
-		{
-			TableNum[i] = 0;
-		}
-		
 		// 各个房间的桌子数目
 		for (int i = 0; i < RoomTableNum.length; i++)
 		{
 			RoomTableNum[i] = 0;
 		}
 		
-		// 各个线程的玩家数目
-		for (int i = 0; i < PlayerNum.length; i++)
+		// 各个房间的玩家数目
+		for (int i = 0; i < RoomPlayerNum.length; i++)
 		{
-			PlayerNum[i] = 0;
+			RoomPlayerNum[i] = 0;
+		}
+		
+		// 桌子人数的玩家分布
+		for (int i = 0; i < TablePlayerNum.length; i++)
+		{
+			TablePlayerNum[i] = 0;
+		}
+		
+		// 各个房间的观战玩家数目
+		for (int i = 0; i < RoomWatchingPlayerNum.length; i++)
+		{
+			RoomWatchingPlayerNum[i] = 0;
 		}
 		
 		// 各个线程的fps数目
@@ -1223,14 +1324,29 @@ public class BlackJackStatMgr
 			// 桌子数目
 			"TotalTableNum\t%d\t桌子数目\n" +
 			
+			// 活跃桌子数目
+			"ActiveTableNum\t%d\t活跃桌子数目\n" +
+			
+			// 隐藏的桌子数目
+			"HideTableNum\t%d\t隐藏的桌子数目\n" +
+			
 			// 桌子上的玩家数目
 			"TotalPlayerNum\t%d\t桌子上的玩家数目\n" +
+			
+			// 桌子上的观战玩家数目
+			"TotalWatchingPlayerNum\t%d\t桌子上的观战玩家数目\n" +
 			
 			// fps数目
 			"TotalFPS\t%d\tfps数目\n" +
 			
 			// 请求分桌数目
 			"JoinNum\t%d\t请求分桌数目\n" +
+			
+			// 快速请求分桌数目
+			"JoinQuickNum\t%d\t快速请求分桌数目\n" +
+			
+			// 手动请求分桌数目
+			"JoinClickNum\t%d\t手动请求分桌数目\n" +
 			
 			// 分桌失败数目
 			"JoinFailNum\t%d\t分桌失败数目\n" +
@@ -1277,12 +1393,6 @@ public class BlackJackStatMgr
 			// 创建的桌子
 			"NewTableNum\t%d\t创建的桌子\n" +
 			
-			// 创建的桌子
-			"NewTableFailNum\t%d\t创建的桌子\n" +
-			
-			// 创建的桌子
-			"NewTableOKNum\t%d\t创建的桌子\n" +
-			
 			// 开局的桌子
 			"InitTableNum\t%d\t开局的桌子\n" +
 			
@@ -1312,308 +1422,6 @@ public class BlackJackStatMgr
 			
 			
 			
-			// 各个线程的桌子数目 0
-			"TableNum0\t%d\t各个线程的桌子数目0\n" +
-			
-			// 各个线程的桌子数目 1
-			"TableNum1\t%d\t各个线程的桌子数目1\n" +
-			
-			// 各个线程的桌子数目 2
-			"TableNum2\t%d\t各个线程的桌子数目2\n" +
-			
-			// 各个线程的桌子数目 3
-			"TableNum3\t%d\t各个线程的桌子数目3\n" +
-			
-			// 各个线程的桌子数目 4
-			"TableNum4\t%d\t各个线程的桌子数目4\n" +
-			
-			// 各个线程的桌子数目 5
-			"TableNum5\t%d\t各个线程的桌子数目5\n" +
-			
-			// 各个线程的桌子数目 6
-			"TableNum6\t%d\t各个线程的桌子数目6\n" +
-			
-			// 各个线程的桌子数目 7
-			"TableNum7\t%d\t各个线程的桌子数目7\n" +
-			
-			// 各个线程的桌子数目 8
-			"TableNum8\t%d\t各个线程的桌子数目8\n" +
-			
-			// 各个线程的桌子数目 9
-			"TableNum9\t%d\t各个线程的桌子数目9\n" +
-			
-			// 各个线程的桌子数目 10
-			"TableNum10\t%d\t各个线程的桌子数目10\n" +
-			
-			// 各个线程的桌子数目 11
-			"TableNum11\t%d\t各个线程的桌子数目11\n" +
-			
-			// 各个线程的桌子数目 12
-			"TableNum12\t%d\t各个线程的桌子数目12\n" +
-			
-			// 各个线程的桌子数目 13
-			"TableNum13\t%d\t各个线程的桌子数目13\n" +
-			
-			// 各个线程的桌子数目 14
-			"TableNum14\t%d\t各个线程的桌子数目14\n" +
-			
-			// 各个线程的桌子数目 15
-			"TableNum15\t%d\t各个线程的桌子数目15\n" +
-			
-			// 各个线程的桌子数目 16
-			"TableNum16\t%d\t各个线程的桌子数目16\n" +
-			
-			// 各个线程的桌子数目 17
-			"TableNum17\t%d\t各个线程的桌子数目17\n" +
-			
-			// 各个线程的桌子数目 18
-			"TableNum18\t%d\t各个线程的桌子数目18\n" +
-			
-			// 各个线程的桌子数目 19
-			"TableNum19\t%d\t各个线程的桌子数目19\n" +
-			
-			// 各个线程的桌子数目 20
-			"TableNum20\t%d\t各个线程的桌子数目20\n" +
-			
-			// 各个线程的桌子数目 21
-			"TableNum21\t%d\t各个线程的桌子数目21\n" +
-			
-			// 各个线程的桌子数目 22
-			"TableNum22\t%d\t各个线程的桌子数目22\n" +
-			
-			// 各个线程的桌子数目 23
-			"TableNum23\t%d\t各个线程的桌子数目23\n" +
-			
-			// 各个线程的桌子数目 24
-			"TableNum24\t%d\t各个线程的桌子数目24\n" +
-			
-			// 各个线程的桌子数目 25
-			"TableNum25\t%d\t各个线程的桌子数目25\n" +
-			
-			// 各个线程的桌子数目 26
-			"TableNum26\t%d\t各个线程的桌子数目26\n" +
-			
-			// 各个线程的桌子数目 27
-			"TableNum27\t%d\t各个线程的桌子数目27\n" +
-			
-			// 各个线程的桌子数目 28
-			"TableNum28\t%d\t各个线程的桌子数目28\n" +
-			
-			// 各个线程的桌子数目 29
-			"TableNum29\t%d\t各个线程的桌子数目29\n" +
-			
-			// 各个线程的桌子数目 30
-			"TableNum30\t%d\t各个线程的桌子数目30\n" +
-			
-			// 各个线程的桌子数目 31
-			"TableNum31\t%d\t各个线程的桌子数目31\n" +
-			
-			// 各个线程的桌子数目 32
-			"TableNum32\t%d\t各个线程的桌子数目32\n" +
-			
-			// 各个线程的桌子数目 33
-			"TableNum33\t%d\t各个线程的桌子数目33\n" +
-			
-			// 各个线程的桌子数目 34
-			"TableNum34\t%d\t各个线程的桌子数目34\n" +
-			
-			// 各个线程的桌子数目 35
-			"TableNum35\t%d\t各个线程的桌子数目35\n" +
-			
-			// 各个线程的桌子数目 36
-			"TableNum36\t%d\t各个线程的桌子数目36\n" +
-			
-			// 各个线程的桌子数目 37
-			"TableNum37\t%d\t各个线程的桌子数目37\n" +
-			
-			// 各个线程的桌子数目 38
-			"TableNum38\t%d\t各个线程的桌子数目38\n" +
-			
-			// 各个线程的桌子数目 39
-			"TableNum39\t%d\t各个线程的桌子数目39\n" +
-			
-			// 各个线程的桌子数目 40
-			"TableNum40\t%d\t各个线程的桌子数目40\n" +
-			
-			// 各个线程的桌子数目 41
-			"TableNum41\t%d\t各个线程的桌子数目41\n" +
-			
-			// 各个线程的桌子数目 42
-			"TableNum42\t%d\t各个线程的桌子数目42\n" +
-			
-			// 各个线程的桌子数目 43
-			"TableNum43\t%d\t各个线程的桌子数目43\n" +
-			
-			// 各个线程的桌子数目 44
-			"TableNum44\t%d\t各个线程的桌子数目44\n" +
-			
-			// 各个线程的桌子数目 45
-			"TableNum45\t%d\t各个线程的桌子数目45\n" +
-			
-			// 各个线程的桌子数目 46
-			"TableNum46\t%d\t各个线程的桌子数目46\n" +
-			
-			// 各个线程的桌子数目 47
-			"TableNum47\t%d\t各个线程的桌子数目47\n" +
-			
-			// 各个线程的桌子数目 48
-			"TableNum48\t%d\t各个线程的桌子数目48\n" +
-			
-			// 各个线程的桌子数目 49
-			"TableNum49\t%d\t各个线程的桌子数目49\n" +
-			
-			// 各个线程的桌子数目 50
-			"TableNum50\t%d\t各个线程的桌子数目50\n" +
-			
-			// 各个线程的桌子数目 51
-			"TableNum51\t%d\t各个线程的桌子数目51\n" +
-			
-			// 各个线程的桌子数目 52
-			"TableNum52\t%d\t各个线程的桌子数目52\n" +
-			
-			// 各个线程的桌子数目 53
-			"TableNum53\t%d\t各个线程的桌子数目53\n" +
-			
-			// 各个线程的桌子数目 54
-			"TableNum54\t%d\t各个线程的桌子数目54\n" +
-			
-			// 各个线程的桌子数目 55
-			"TableNum55\t%d\t各个线程的桌子数目55\n" +
-			
-			// 各个线程的桌子数目 56
-			"TableNum56\t%d\t各个线程的桌子数目56\n" +
-			
-			// 各个线程的桌子数目 57
-			"TableNum57\t%d\t各个线程的桌子数目57\n" +
-			
-			// 各个线程的桌子数目 58
-			"TableNum58\t%d\t各个线程的桌子数目58\n" +
-			
-			// 各个线程的桌子数目 59
-			"TableNum59\t%d\t各个线程的桌子数目59\n" +
-			
-			// 各个线程的桌子数目 60
-			"TableNum60\t%d\t各个线程的桌子数目60\n" +
-			
-			// 各个线程的桌子数目 61
-			"TableNum61\t%d\t各个线程的桌子数目61\n" +
-			
-			// 各个线程的桌子数目 62
-			"TableNum62\t%d\t各个线程的桌子数目62\n" +
-			
-			// 各个线程的桌子数目 63
-			"TableNum63\t%d\t各个线程的桌子数目63\n" +
-			
-			// 各个线程的桌子数目 64
-			"TableNum64\t%d\t各个线程的桌子数目64\n" +
-			
-			// 各个线程的桌子数目 65
-			"TableNum65\t%d\t各个线程的桌子数目65\n" +
-			
-			// 各个线程的桌子数目 66
-			"TableNum66\t%d\t各个线程的桌子数目66\n" +
-			
-			// 各个线程的桌子数目 67
-			"TableNum67\t%d\t各个线程的桌子数目67\n" +
-			
-			// 各个线程的桌子数目 68
-			"TableNum68\t%d\t各个线程的桌子数目68\n" +
-			
-			// 各个线程的桌子数目 69
-			"TableNum69\t%d\t各个线程的桌子数目69\n" +
-			
-			// 各个线程的桌子数目 70
-			"TableNum70\t%d\t各个线程的桌子数目70\n" +
-			
-			// 各个线程的桌子数目 71
-			"TableNum71\t%d\t各个线程的桌子数目71\n" +
-			
-			// 各个线程的桌子数目 72
-			"TableNum72\t%d\t各个线程的桌子数目72\n" +
-			
-			// 各个线程的桌子数目 73
-			"TableNum73\t%d\t各个线程的桌子数目73\n" +
-			
-			// 各个线程的桌子数目 74
-			"TableNum74\t%d\t各个线程的桌子数目74\n" +
-			
-			// 各个线程的桌子数目 75
-			"TableNum75\t%d\t各个线程的桌子数目75\n" +
-			
-			// 各个线程的桌子数目 76
-			"TableNum76\t%d\t各个线程的桌子数目76\n" +
-			
-			// 各个线程的桌子数目 77
-			"TableNum77\t%d\t各个线程的桌子数目77\n" +
-			
-			// 各个线程的桌子数目 78
-			"TableNum78\t%d\t各个线程的桌子数目78\n" +
-			
-			// 各个线程的桌子数目 79
-			"TableNum79\t%d\t各个线程的桌子数目79\n" +
-			
-			// 各个线程的桌子数目 80
-			"TableNum80\t%d\t各个线程的桌子数目80\n" +
-			
-			// 各个线程的桌子数目 81
-			"TableNum81\t%d\t各个线程的桌子数目81\n" +
-			
-			// 各个线程的桌子数目 82
-			"TableNum82\t%d\t各个线程的桌子数目82\n" +
-			
-			// 各个线程的桌子数目 83
-			"TableNum83\t%d\t各个线程的桌子数目83\n" +
-			
-			// 各个线程的桌子数目 84
-			"TableNum84\t%d\t各个线程的桌子数目84\n" +
-			
-			// 各个线程的桌子数目 85
-			"TableNum85\t%d\t各个线程的桌子数目85\n" +
-			
-			// 各个线程的桌子数目 86
-			"TableNum86\t%d\t各个线程的桌子数目86\n" +
-			
-			// 各个线程的桌子数目 87
-			"TableNum87\t%d\t各个线程的桌子数目87\n" +
-			
-			// 各个线程的桌子数目 88
-			"TableNum88\t%d\t各个线程的桌子数目88\n" +
-			
-			// 各个线程的桌子数目 89
-			"TableNum89\t%d\t各个线程的桌子数目89\n" +
-			
-			// 各个线程的桌子数目 90
-			"TableNum90\t%d\t各个线程的桌子数目90\n" +
-			
-			// 各个线程的桌子数目 91
-			"TableNum91\t%d\t各个线程的桌子数目91\n" +
-			
-			// 各个线程的桌子数目 92
-			"TableNum92\t%d\t各个线程的桌子数目92\n" +
-			
-			// 各个线程的桌子数目 93
-			"TableNum93\t%d\t各个线程的桌子数目93\n" +
-			
-			// 各个线程的桌子数目 94
-			"TableNum94\t%d\t各个线程的桌子数目94\n" +
-			
-			// 各个线程的桌子数目 95
-			"TableNum95\t%d\t各个线程的桌子数目95\n" +
-			
-			// 各个线程的桌子数目 96
-			"TableNum96\t%d\t各个线程的桌子数目96\n" +
-			
-			// 各个线程的桌子数目 97
-			"TableNum97\t%d\t各个线程的桌子数目97\n" +
-			
-			// 各个线程的桌子数目 98
-			"TableNum98\t%d\t各个线程的桌子数目98\n" +
-			
-			// 各个线程的桌子数目 99
-			"TableNum99\t%d\t各个线程的桌子数目99\n" +
-			
-			
-			
 			// 各个房间的桌子数目 0
 			"RoomTableNum0\t%d\t各个房间的桌子数目0\n" +
 			
@@ -1625,305 +1433,45 @@ public class BlackJackStatMgr
 			
 			
 			
-			// 各个线程的玩家数目 0
-			"PlayerNum0\t%d\t各个线程的玩家数目0\n" +
+			// 各个房间的玩家数目 0
+			"RoomPlayerNum0\t%d\t各个房间的玩家数目0\n" +
 			
-			// 各个线程的玩家数目 1
-			"PlayerNum1\t%d\t各个线程的玩家数目1\n" +
+			// 各个房间的玩家数目 1
+			"RoomPlayerNum1\t%d\t各个房间的玩家数目1\n" +
 			
-			// 各个线程的玩家数目 2
-			"PlayerNum2\t%d\t各个线程的玩家数目2\n" +
+			// 各个房间的玩家数目 2
+			"RoomPlayerNum2\t%d\t各个房间的玩家数目2\n" +
 			
-			// 各个线程的玩家数目 3
-			"PlayerNum3\t%d\t各个线程的玩家数目3\n" +
 			
-			// 各个线程的玩家数目 4
-			"PlayerNum4\t%d\t各个线程的玩家数目4\n" +
 			
-			// 各个线程的玩家数目 5
-			"PlayerNum5\t%d\t各个线程的玩家数目5\n" +
+			// 桌子人数的玩家分布 0
+			"TablePlayerNum0\t%d\t桌子人数的玩家分布0\n" +
 			
-			// 各个线程的玩家数目 6
-			"PlayerNum6\t%d\t各个线程的玩家数目6\n" +
+			// 桌子人数的玩家分布 1
+			"TablePlayerNum1\t%d\t桌子人数的玩家分布1\n" +
 			
-			// 各个线程的玩家数目 7
-			"PlayerNum7\t%d\t各个线程的玩家数目7\n" +
+			// 桌子人数的玩家分布 2
+			"TablePlayerNum2\t%d\t桌子人数的玩家分布2\n" +
 			
-			// 各个线程的玩家数目 8
-			"PlayerNum8\t%d\t各个线程的玩家数目8\n" +
+			// 桌子人数的玩家分布 3
+			"TablePlayerNum3\t%d\t桌子人数的玩家分布3\n" +
 			
-			// 各个线程的玩家数目 9
-			"PlayerNum9\t%d\t各个线程的玩家数目9\n" +
+			// 桌子人数的玩家分布 4
+			"TablePlayerNum4\t%d\t桌子人数的玩家分布4\n" +
 			
-			// 各个线程的玩家数目 10
-			"PlayerNum10\t%d\t各个线程的玩家数目10\n" +
+			// 桌子人数的玩家分布 5
+			"TablePlayerNum5\t%d\t桌子人数的玩家分布5\n" +
 			
-			// 各个线程的玩家数目 11
-			"PlayerNum11\t%d\t各个线程的玩家数目11\n" +
 			
-			// 各个线程的玩家数目 12
-			"PlayerNum12\t%d\t各个线程的玩家数目12\n" +
 			
-			// 各个线程的玩家数目 13
-			"PlayerNum13\t%d\t各个线程的玩家数目13\n" +
+			// 各个房间的观战玩家数目 0
+			"RoomWatchingPlayerNum0\t%d\t各个房间的观战玩家数目0\n" +
 			
-			// 各个线程的玩家数目 14
-			"PlayerNum14\t%d\t各个线程的玩家数目14\n" +
+			// 各个房间的观战玩家数目 1
+			"RoomWatchingPlayerNum1\t%d\t各个房间的观战玩家数目1\n" +
 			
-			// 各个线程的玩家数目 15
-			"PlayerNum15\t%d\t各个线程的玩家数目15\n" +
-			
-			// 各个线程的玩家数目 16
-			"PlayerNum16\t%d\t各个线程的玩家数目16\n" +
-			
-			// 各个线程的玩家数目 17
-			"PlayerNum17\t%d\t各个线程的玩家数目17\n" +
-			
-			// 各个线程的玩家数目 18
-			"PlayerNum18\t%d\t各个线程的玩家数目18\n" +
-			
-			// 各个线程的玩家数目 19
-			"PlayerNum19\t%d\t各个线程的玩家数目19\n" +
-			
-			// 各个线程的玩家数目 20
-			"PlayerNum20\t%d\t各个线程的玩家数目20\n" +
-			
-			// 各个线程的玩家数目 21
-			"PlayerNum21\t%d\t各个线程的玩家数目21\n" +
-			
-			// 各个线程的玩家数目 22
-			"PlayerNum22\t%d\t各个线程的玩家数目22\n" +
-			
-			// 各个线程的玩家数目 23
-			"PlayerNum23\t%d\t各个线程的玩家数目23\n" +
-			
-			// 各个线程的玩家数目 24
-			"PlayerNum24\t%d\t各个线程的玩家数目24\n" +
-			
-			// 各个线程的玩家数目 25
-			"PlayerNum25\t%d\t各个线程的玩家数目25\n" +
-			
-			// 各个线程的玩家数目 26
-			"PlayerNum26\t%d\t各个线程的玩家数目26\n" +
-			
-			// 各个线程的玩家数目 27
-			"PlayerNum27\t%d\t各个线程的玩家数目27\n" +
-			
-			// 各个线程的玩家数目 28
-			"PlayerNum28\t%d\t各个线程的玩家数目28\n" +
-			
-			// 各个线程的玩家数目 29
-			"PlayerNum29\t%d\t各个线程的玩家数目29\n" +
-			
-			// 各个线程的玩家数目 30
-			"PlayerNum30\t%d\t各个线程的玩家数目30\n" +
-			
-			// 各个线程的玩家数目 31
-			"PlayerNum31\t%d\t各个线程的玩家数目31\n" +
-			
-			// 各个线程的玩家数目 32
-			"PlayerNum32\t%d\t各个线程的玩家数目32\n" +
-			
-			// 各个线程的玩家数目 33
-			"PlayerNum33\t%d\t各个线程的玩家数目33\n" +
-			
-			// 各个线程的玩家数目 34
-			"PlayerNum34\t%d\t各个线程的玩家数目34\n" +
-			
-			// 各个线程的玩家数目 35
-			"PlayerNum35\t%d\t各个线程的玩家数目35\n" +
-			
-			// 各个线程的玩家数目 36
-			"PlayerNum36\t%d\t各个线程的玩家数目36\n" +
-			
-			// 各个线程的玩家数目 37
-			"PlayerNum37\t%d\t各个线程的玩家数目37\n" +
-			
-			// 各个线程的玩家数目 38
-			"PlayerNum38\t%d\t各个线程的玩家数目38\n" +
-			
-			// 各个线程的玩家数目 39
-			"PlayerNum39\t%d\t各个线程的玩家数目39\n" +
-			
-			// 各个线程的玩家数目 40
-			"PlayerNum40\t%d\t各个线程的玩家数目40\n" +
-			
-			// 各个线程的玩家数目 41
-			"PlayerNum41\t%d\t各个线程的玩家数目41\n" +
-			
-			// 各个线程的玩家数目 42
-			"PlayerNum42\t%d\t各个线程的玩家数目42\n" +
-			
-			// 各个线程的玩家数目 43
-			"PlayerNum43\t%d\t各个线程的玩家数目43\n" +
-			
-			// 各个线程的玩家数目 44
-			"PlayerNum44\t%d\t各个线程的玩家数目44\n" +
-			
-			// 各个线程的玩家数目 45
-			"PlayerNum45\t%d\t各个线程的玩家数目45\n" +
-			
-			// 各个线程的玩家数目 46
-			"PlayerNum46\t%d\t各个线程的玩家数目46\n" +
-			
-			// 各个线程的玩家数目 47
-			"PlayerNum47\t%d\t各个线程的玩家数目47\n" +
-			
-			// 各个线程的玩家数目 48
-			"PlayerNum48\t%d\t各个线程的玩家数目48\n" +
-			
-			// 各个线程的玩家数目 49
-			"PlayerNum49\t%d\t各个线程的玩家数目49\n" +
-			
-			// 各个线程的玩家数目 50
-			"PlayerNum50\t%d\t各个线程的玩家数目50\n" +
-			
-			// 各个线程的玩家数目 51
-			"PlayerNum51\t%d\t各个线程的玩家数目51\n" +
-			
-			// 各个线程的玩家数目 52
-			"PlayerNum52\t%d\t各个线程的玩家数目52\n" +
-			
-			// 各个线程的玩家数目 53
-			"PlayerNum53\t%d\t各个线程的玩家数目53\n" +
-			
-			// 各个线程的玩家数目 54
-			"PlayerNum54\t%d\t各个线程的玩家数目54\n" +
-			
-			// 各个线程的玩家数目 55
-			"PlayerNum55\t%d\t各个线程的玩家数目55\n" +
-			
-			// 各个线程的玩家数目 56
-			"PlayerNum56\t%d\t各个线程的玩家数目56\n" +
-			
-			// 各个线程的玩家数目 57
-			"PlayerNum57\t%d\t各个线程的玩家数目57\n" +
-			
-			// 各个线程的玩家数目 58
-			"PlayerNum58\t%d\t各个线程的玩家数目58\n" +
-			
-			// 各个线程的玩家数目 59
-			"PlayerNum59\t%d\t各个线程的玩家数目59\n" +
-			
-			// 各个线程的玩家数目 60
-			"PlayerNum60\t%d\t各个线程的玩家数目60\n" +
-			
-			// 各个线程的玩家数目 61
-			"PlayerNum61\t%d\t各个线程的玩家数目61\n" +
-			
-			// 各个线程的玩家数目 62
-			"PlayerNum62\t%d\t各个线程的玩家数目62\n" +
-			
-			// 各个线程的玩家数目 63
-			"PlayerNum63\t%d\t各个线程的玩家数目63\n" +
-			
-			// 各个线程的玩家数目 64
-			"PlayerNum64\t%d\t各个线程的玩家数目64\n" +
-			
-			// 各个线程的玩家数目 65
-			"PlayerNum65\t%d\t各个线程的玩家数目65\n" +
-			
-			// 各个线程的玩家数目 66
-			"PlayerNum66\t%d\t各个线程的玩家数目66\n" +
-			
-			// 各个线程的玩家数目 67
-			"PlayerNum67\t%d\t各个线程的玩家数目67\n" +
-			
-			// 各个线程的玩家数目 68
-			"PlayerNum68\t%d\t各个线程的玩家数目68\n" +
-			
-			// 各个线程的玩家数目 69
-			"PlayerNum69\t%d\t各个线程的玩家数目69\n" +
-			
-			// 各个线程的玩家数目 70
-			"PlayerNum70\t%d\t各个线程的玩家数目70\n" +
-			
-			// 各个线程的玩家数目 71
-			"PlayerNum71\t%d\t各个线程的玩家数目71\n" +
-			
-			// 各个线程的玩家数目 72
-			"PlayerNum72\t%d\t各个线程的玩家数目72\n" +
-			
-			// 各个线程的玩家数目 73
-			"PlayerNum73\t%d\t各个线程的玩家数目73\n" +
-			
-			// 各个线程的玩家数目 74
-			"PlayerNum74\t%d\t各个线程的玩家数目74\n" +
-			
-			// 各个线程的玩家数目 75
-			"PlayerNum75\t%d\t各个线程的玩家数目75\n" +
-			
-			// 各个线程的玩家数目 76
-			"PlayerNum76\t%d\t各个线程的玩家数目76\n" +
-			
-			// 各个线程的玩家数目 77
-			"PlayerNum77\t%d\t各个线程的玩家数目77\n" +
-			
-			// 各个线程的玩家数目 78
-			"PlayerNum78\t%d\t各个线程的玩家数目78\n" +
-			
-			// 各个线程的玩家数目 79
-			"PlayerNum79\t%d\t各个线程的玩家数目79\n" +
-			
-			// 各个线程的玩家数目 80
-			"PlayerNum80\t%d\t各个线程的玩家数目80\n" +
-			
-			// 各个线程的玩家数目 81
-			"PlayerNum81\t%d\t各个线程的玩家数目81\n" +
-			
-			// 各个线程的玩家数目 82
-			"PlayerNum82\t%d\t各个线程的玩家数目82\n" +
-			
-			// 各个线程的玩家数目 83
-			"PlayerNum83\t%d\t各个线程的玩家数目83\n" +
-			
-			// 各个线程的玩家数目 84
-			"PlayerNum84\t%d\t各个线程的玩家数目84\n" +
-			
-			// 各个线程的玩家数目 85
-			"PlayerNum85\t%d\t各个线程的玩家数目85\n" +
-			
-			// 各个线程的玩家数目 86
-			"PlayerNum86\t%d\t各个线程的玩家数目86\n" +
-			
-			// 各个线程的玩家数目 87
-			"PlayerNum87\t%d\t各个线程的玩家数目87\n" +
-			
-			// 各个线程的玩家数目 88
-			"PlayerNum88\t%d\t各个线程的玩家数目88\n" +
-			
-			// 各个线程的玩家数目 89
-			"PlayerNum89\t%d\t各个线程的玩家数目89\n" +
-			
-			// 各个线程的玩家数目 90
-			"PlayerNum90\t%d\t各个线程的玩家数目90\n" +
-			
-			// 各个线程的玩家数目 91
-			"PlayerNum91\t%d\t各个线程的玩家数目91\n" +
-			
-			// 各个线程的玩家数目 92
-			"PlayerNum92\t%d\t各个线程的玩家数目92\n" +
-			
-			// 各个线程的玩家数目 93
-			"PlayerNum93\t%d\t各个线程的玩家数目93\n" +
-			
-			// 各个线程的玩家数目 94
-			"PlayerNum94\t%d\t各个线程的玩家数目94\n" +
-			
-			// 各个线程的玩家数目 95
-			"PlayerNum95\t%d\t各个线程的玩家数目95\n" +
-			
-			// 各个线程的玩家数目 96
-			"PlayerNum96\t%d\t各个线程的玩家数目96\n" +
-			
-			// 各个线程的玩家数目 97
-			"PlayerNum97\t%d\t各个线程的玩家数目97\n" +
-			
-			// 各个线程的玩家数目 98
-			"PlayerNum98\t%d\t各个线程的玩家数目98\n" +
-			
-			// 各个线程的玩家数目 99
-			"PlayerNum99\t%d\t各个线程的玩家数目99\n" +
+			// 各个房间的观战玩家数目 2
+			"RoomWatchingPlayerNum2\t%d\t各个房间的观战玩家数目2\n" +
 			
 			
 			
@@ -2357,14 +1905,29 @@ public class BlackJackStatMgr
 			// 桌子数目
 			, TotalTableNum
 			
+			// 活跃桌子数目
+			, ActiveTableNum
+			
+			// 隐藏的桌子数目
+			, HideTableNum
+			
 			// 桌子上的玩家数目
 			, TotalPlayerNum
+			
+			// 桌子上的观战玩家数目
+			, TotalWatchingPlayerNum
 			
 			// fps数目
 			, TotalFPS
 			
 			// 请求分桌数目
 			, JoinNum
+			
+			// 快速请求分桌数目
+			, JoinQuickNum
+			
+			// 手动请求分桌数目
+			, JoinClickNum
 			
 			// 分桌失败数目
 			, JoinFailNum
@@ -2411,12 +1974,6 @@ public class BlackJackStatMgr
 			// 创建的桌子
 			, NewTableNum
 			
-			// 创建的桌子
-			, NewTableFailNum
-			
-			// 创建的桌子
-			, NewTableOKNum
-			
 			// 开局的桌子
 			, InitTableNum
 			
@@ -2446,308 +2003,6 @@ public class BlackJackStatMgr
 			
 			
 			
-			// 各个线程的桌子数目 0
-			, TableNum[0]
-			
-			// 各个线程的桌子数目 1
-			, TableNum[1]
-			
-			// 各个线程的桌子数目 2
-			, TableNum[2]
-			
-			// 各个线程的桌子数目 3
-			, TableNum[3]
-			
-			// 各个线程的桌子数目 4
-			, TableNum[4]
-			
-			// 各个线程的桌子数目 5
-			, TableNum[5]
-			
-			// 各个线程的桌子数目 6
-			, TableNum[6]
-			
-			// 各个线程的桌子数目 7
-			, TableNum[7]
-			
-			// 各个线程的桌子数目 8
-			, TableNum[8]
-			
-			// 各个线程的桌子数目 9
-			, TableNum[9]
-			
-			// 各个线程的桌子数目 10
-			, TableNum[10]
-			
-			// 各个线程的桌子数目 11
-			, TableNum[11]
-			
-			// 各个线程的桌子数目 12
-			, TableNum[12]
-			
-			// 各个线程的桌子数目 13
-			, TableNum[13]
-			
-			// 各个线程的桌子数目 14
-			, TableNum[14]
-			
-			// 各个线程的桌子数目 15
-			, TableNum[15]
-			
-			// 各个线程的桌子数目 16
-			, TableNum[16]
-			
-			// 各个线程的桌子数目 17
-			, TableNum[17]
-			
-			// 各个线程的桌子数目 18
-			, TableNum[18]
-			
-			// 各个线程的桌子数目 19
-			, TableNum[19]
-			
-			// 各个线程的桌子数目 20
-			, TableNum[20]
-			
-			// 各个线程的桌子数目 21
-			, TableNum[21]
-			
-			// 各个线程的桌子数目 22
-			, TableNum[22]
-			
-			// 各个线程的桌子数目 23
-			, TableNum[23]
-			
-			// 各个线程的桌子数目 24
-			, TableNum[24]
-			
-			// 各个线程的桌子数目 25
-			, TableNum[25]
-			
-			// 各个线程的桌子数目 26
-			, TableNum[26]
-			
-			// 各个线程的桌子数目 27
-			, TableNum[27]
-			
-			// 各个线程的桌子数目 28
-			, TableNum[28]
-			
-			// 各个线程的桌子数目 29
-			, TableNum[29]
-			
-			// 各个线程的桌子数目 30
-			, TableNum[30]
-			
-			// 各个线程的桌子数目 31
-			, TableNum[31]
-			
-			// 各个线程的桌子数目 32
-			, TableNum[32]
-			
-			// 各个线程的桌子数目 33
-			, TableNum[33]
-			
-			// 各个线程的桌子数目 34
-			, TableNum[34]
-			
-			// 各个线程的桌子数目 35
-			, TableNum[35]
-			
-			// 各个线程的桌子数目 36
-			, TableNum[36]
-			
-			// 各个线程的桌子数目 37
-			, TableNum[37]
-			
-			// 各个线程的桌子数目 38
-			, TableNum[38]
-			
-			// 各个线程的桌子数目 39
-			, TableNum[39]
-			
-			// 各个线程的桌子数目 40
-			, TableNum[40]
-			
-			// 各个线程的桌子数目 41
-			, TableNum[41]
-			
-			// 各个线程的桌子数目 42
-			, TableNum[42]
-			
-			// 各个线程的桌子数目 43
-			, TableNum[43]
-			
-			// 各个线程的桌子数目 44
-			, TableNum[44]
-			
-			// 各个线程的桌子数目 45
-			, TableNum[45]
-			
-			// 各个线程的桌子数目 46
-			, TableNum[46]
-			
-			// 各个线程的桌子数目 47
-			, TableNum[47]
-			
-			// 各个线程的桌子数目 48
-			, TableNum[48]
-			
-			// 各个线程的桌子数目 49
-			, TableNum[49]
-			
-			// 各个线程的桌子数目 50
-			, TableNum[50]
-			
-			// 各个线程的桌子数目 51
-			, TableNum[51]
-			
-			// 各个线程的桌子数目 52
-			, TableNum[52]
-			
-			// 各个线程的桌子数目 53
-			, TableNum[53]
-			
-			// 各个线程的桌子数目 54
-			, TableNum[54]
-			
-			// 各个线程的桌子数目 55
-			, TableNum[55]
-			
-			// 各个线程的桌子数目 56
-			, TableNum[56]
-			
-			// 各个线程的桌子数目 57
-			, TableNum[57]
-			
-			// 各个线程的桌子数目 58
-			, TableNum[58]
-			
-			// 各个线程的桌子数目 59
-			, TableNum[59]
-			
-			// 各个线程的桌子数目 60
-			, TableNum[60]
-			
-			// 各个线程的桌子数目 61
-			, TableNum[61]
-			
-			// 各个线程的桌子数目 62
-			, TableNum[62]
-			
-			// 各个线程的桌子数目 63
-			, TableNum[63]
-			
-			// 各个线程的桌子数目 64
-			, TableNum[64]
-			
-			// 各个线程的桌子数目 65
-			, TableNum[65]
-			
-			// 各个线程的桌子数目 66
-			, TableNum[66]
-			
-			// 各个线程的桌子数目 67
-			, TableNum[67]
-			
-			// 各个线程的桌子数目 68
-			, TableNum[68]
-			
-			// 各个线程的桌子数目 69
-			, TableNum[69]
-			
-			// 各个线程的桌子数目 70
-			, TableNum[70]
-			
-			// 各个线程的桌子数目 71
-			, TableNum[71]
-			
-			// 各个线程的桌子数目 72
-			, TableNum[72]
-			
-			// 各个线程的桌子数目 73
-			, TableNum[73]
-			
-			// 各个线程的桌子数目 74
-			, TableNum[74]
-			
-			// 各个线程的桌子数目 75
-			, TableNum[75]
-			
-			// 各个线程的桌子数目 76
-			, TableNum[76]
-			
-			// 各个线程的桌子数目 77
-			, TableNum[77]
-			
-			// 各个线程的桌子数目 78
-			, TableNum[78]
-			
-			// 各个线程的桌子数目 79
-			, TableNum[79]
-			
-			// 各个线程的桌子数目 80
-			, TableNum[80]
-			
-			// 各个线程的桌子数目 81
-			, TableNum[81]
-			
-			// 各个线程的桌子数目 82
-			, TableNum[82]
-			
-			// 各个线程的桌子数目 83
-			, TableNum[83]
-			
-			// 各个线程的桌子数目 84
-			, TableNum[84]
-			
-			// 各个线程的桌子数目 85
-			, TableNum[85]
-			
-			// 各个线程的桌子数目 86
-			, TableNum[86]
-			
-			// 各个线程的桌子数目 87
-			, TableNum[87]
-			
-			// 各个线程的桌子数目 88
-			, TableNum[88]
-			
-			// 各个线程的桌子数目 89
-			, TableNum[89]
-			
-			// 各个线程的桌子数目 90
-			, TableNum[90]
-			
-			// 各个线程的桌子数目 91
-			, TableNum[91]
-			
-			// 各个线程的桌子数目 92
-			, TableNum[92]
-			
-			// 各个线程的桌子数目 93
-			, TableNum[93]
-			
-			// 各个线程的桌子数目 94
-			, TableNum[94]
-			
-			// 各个线程的桌子数目 95
-			, TableNum[95]
-			
-			// 各个线程的桌子数目 96
-			, TableNum[96]
-			
-			// 各个线程的桌子数目 97
-			, TableNum[97]
-			
-			// 各个线程的桌子数目 98
-			, TableNum[98]
-			
-			// 各个线程的桌子数目 99
-			, TableNum[99]
-			
-			
-			
 			// 各个房间的桌子数目 0
 			, RoomTableNum[0]
 			
@@ -2759,305 +2014,45 @@ public class BlackJackStatMgr
 			
 			
 			
-			// 各个线程的玩家数目 0
-			, PlayerNum[0]
+			// 各个房间的玩家数目 0
+			, RoomPlayerNum[0]
 			
-			// 各个线程的玩家数目 1
-			, PlayerNum[1]
+			// 各个房间的玩家数目 1
+			, RoomPlayerNum[1]
 			
-			// 各个线程的玩家数目 2
-			, PlayerNum[2]
+			// 各个房间的玩家数目 2
+			, RoomPlayerNum[2]
 			
-			// 各个线程的玩家数目 3
-			, PlayerNum[3]
 			
-			// 各个线程的玩家数目 4
-			, PlayerNum[4]
 			
-			// 各个线程的玩家数目 5
-			, PlayerNum[5]
+			// 桌子人数的玩家分布 0
+			, TablePlayerNum[0]
 			
-			// 各个线程的玩家数目 6
-			, PlayerNum[6]
+			// 桌子人数的玩家分布 1
+			, TablePlayerNum[1]
 			
-			// 各个线程的玩家数目 7
-			, PlayerNum[7]
+			// 桌子人数的玩家分布 2
+			, TablePlayerNum[2]
 			
-			// 各个线程的玩家数目 8
-			, PlayerNum[8]
+			// 桌子人数的玩家分布 3
+			, TablePlayerNum[3]
 			
-			// 各个线程的玩家数目 9
-			, PlayerNum[9]
+			// 桌子人数的玩家分布 4
+			, TablePlayerNum[4]
 			
-			// 各个线程的玩家数目 10
-			, PlayerNum[10]
+			// 桌子人数的玩家分布 5
+			, TablePlayerNum[5]
 			
-			// 各个线程的玩家数目 11
-			, PlayerNum[11]
 			
-			// 各个线程的玩家数目 12
-			, PlayerNum[12]
 			
-			// 各个线程的玩家数目 13
-			, PlayerNum[13]
+			// 各个房间的观战玩家数目 0
+			, RoomWatchingPlayerNum[0]
 			
-			// 各个线程的玩家数目 14
-			, PlayerNum[14]
+			// 各个房间的观战玩家数目 1
+			, RoomWatchingPlayerNum[1]
 			
-			// 各个线程的玩家数目 15
-			, PlayerNum[15]
-			
-			// 各个线程的玩家数目 16
-			, PlayerNum[16]
-			
-			// 各个线程的玩家数目 17
-			, PlayerNum[17]
-			
-			// 各个线程的玩家数目 18
-			, PlayerNum[18]
-			
-			// 各个线程的玩家数目 19
-			, PlayerNum[19]
-			
-			// 各个线程的玩家数目 20
-			, PlayerNum[20]
-			
-			// 各个线程的玩家数目 21
-			, PlayerNum[21]
-			
-			// 各个线程的玩家数目 22
-			, PlayerNum[22]
-			
-			// 各个线程的玩家数目 23
-			, PlayerNum[23]
-			
-			// 各个线程的玩家数目 24
-			, PlayerNum[24]
-			
-			// 各个线程的玩家数目 25
-			, PlayerNum[25]
-			
-			// 各个线程的玩家数目 26
-			, PlayerNum[26]
-			
-			// 各个线程的玩家数目 27
-			, PlayerNum[27]
-			
-			// 各个线程的玩家数目 28
-			, PlayerNum[28]
-			
-			// 各个线程的玩家数目 29
-			, PlayerNum[29]
-			
-			// 各个线程的玩家数目 30
-			, PlayerNum[30]
-			
-			// 各个线程的玩家数目 31
-			, PlayerNum[31]
-			
-			// 各个线程的玩家数目 32
-			, PlayerNum[32]
-			
-			// 各个线程的玩家数目 33
-			, PlayerNum[33]
-			
-			// 各个线程的玩家数目 34
-			, PlayerNum[34]
-			
-			// 各个线程的玩家数目 35
-			, PlayerNum[35]
-			
-			// 各个线程的玩家数目 36
-			, PlayerNum[36]
-			
-			// 各个线程的玩家数目 37
-			, PlayerNum[37]
-			
-			// 各个线程的玩家数目 38
-			, PlayerNum[38]
-			
-			// 各个线程的玩家数目 39
-			, PlayerNum[39]
-			
-			// 各个线程的玩家数目 40
-			, PlayerNum[40]
-			
-			// 各个线程的玩家数目 41
-			, PlayerNum[41]
-			
-			// 各个线程的玩家数目 42
-			, PlayerNum[42]
-			
-			// 各个线程的玩家数目 43
-			, PlayerNum[43]
-			
-			// 各个线程的玩家数目 44
-			, PlayerNum[44]
-			
-			// 各个线程的玩家数目 45
-			, PlayerNum[45]
-			
-			// 各个线程的玩家数目 46
-			, PlayerNum[46]
-			
-			// 各个线程的玩家数目 47
-			, PlayerNum[47]
-			
-			// 各个线程的玩家数目 48
-			, PlayerNum[48]
-			
-			// 各个线程的玩家数目 49
-			, PlayerNum[49]
-			
-			// 各个线程的玩家数目 50
-			, PlayerNum[50]
-			
-			// 各个线程的玩家数目 51
-			, PlayerNum[51]
-			
-			// 各个线程的玩家数目 52
-			, PlayerNum[52]
-			
-			// 各个线程的玩家数目 53
-			, PlayerNum[53]
-			
-			// 各个线程的玩家数目 54
-			, PlayerNum[54]
-			
-			// 各个线程的玩家数目 55
-			, PlayerNum[55]
-			
-			// 各个线程的玩家数目 56
-			, PlayerNum[56]
-			
-			// 各个线程的玩家数目 57
-			, PlayerNum[57]
-			
-			// 各个线程的玩家数目 58
-			, PlayerNum[58]
-			
-			// 各个线程的玩家数目 59
-			, PlayerNum[59]
-			
-			// 各个线程的玩家数目 60
-			, PlayerNum[60]
-			
-			// 各个线程的玩家数目 61
-			, PlayerNum[61]
-			
-			// 各个线程的玩家数目 62
-			, PlayerNum[62]
-			
-			// 各个线程的玩家数目 63
-			, PlayerNum[63]
-			
-			// 各个线程的玩家数目 64
-			, PlayerNum[64]
-			
-			// 各个线程的玩家数目 65
-			, PlayerNum[65]
-			
-			// 各个线程的玩家数目 66
-			, PlayerNum[66]
-			
-			// 各个线程的玩家数目 67
-			, PlayerNum[67]
-			
-			// 各个线程的玩家数目 68
-			, PlayerNum[68]
-			
-			// 各个线程的玩家数目 69
-			, PlayerNum[69]
-			
-			// 各个线程的玩家数目 70
-			, PlayerNum[70]
-			
-			// 各个线程的玩家数目 71
-			, PlayerNum[71]
-			
-			// 各个线程的玩家数目 72
-			, PlayerNum[72]
-			
-			// 各个线程的玩家数目 73
-			, PlayerNum[73]
-			
-			// 各个线程的玩家数目 74
-			, PlayerNum[74]
-			
-			// 各个线程的玩家数目 75
-			, PlayerNum[75]
-			
-			// 各个线程的玩家数目 76
-			, PlayerNum[76]
-			
-			// 各个线程的玩家数目 77
-			, PlayerNum[77]
-			
-			// 各个线程的玩家数目 78
-			, PlayerNum[78]
-			
-			// 各个线程的玩家数目 79
-			, PlayerNum[79]
-			
-			// 各个线程的玩家数目 80
-			, PlayerNum[80]
-			
-			// 各个线程的玩家数目 81
-			, PlayerNum[81]
-			
-			// 各个线程的玩家数目 82
-			, PlayerNum[82]
-			
-			// 各个线程的玩家数目 83
-			, PlayerNum[83]
-			
-			// 各个线程的玩家数目 84
-			, PlayerNum[84]
-			
-			// 各个线程的玩家数目 85
-			, PlayerNum[85]
-			
-			// 各个线程的玩家数目 86
-			, PlayerNum[86]
-			
-			// 各个线程的玩家数目 87
-			, PlayerNum[87]
-			
-			// 各个线程的玩家数目 88
-			, PlayerNum[88]
-			
-			// 各个线程的玩家数目 89
-			, PlayerNum[89]
-			
-			// 各个线程的玩家数目 90
-			, PlayerNum[90]
-			
-			// 各个线程的玩家数目 91
-			, PlayerNum[91]
-			
-			// 各个线程的玩家数目 92
-			, PlayerNum[92]
-			
-			// 各个线程的玩家数目 93
-			, PlayerNum[93]
-			
-			// 各个线程的玩家数目 94
-			, PlayerNum[94]
-			
-			// 各个线程的玩家数目 95
-			, PlayerNum[95]
-			
-			// 各个线程的玩家数目 96
-			, PlayerNum[96]
-			
-			// 各个线程的玩家数目 97
-			, PlayerNum[97]
-			
-			// 各个线程的玩家数目 98
-			, PlayerNum[98]
-			
-			// 各个线程的玩家数目 99
-			, PlayerNum[99]
+			// 各个房间的观战玩家数目 2
+			, RoomWatchingPlayerNum[2]
 			
 			
 			
