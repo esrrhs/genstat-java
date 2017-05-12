@@ -27,6 +27,7 @@
         <member name="JoinLockFailNum" comment="分桌锁定失败的数目"/>
         <member name="JoinForbiddenFailNum" comment="分桌封禁失败的数目"/>
         <member name="JoinCloseFailNum" comment="分桌关服失败的数目"/>
+        <member name="JoinVIPFailNum" comment="分桌vip失败的数目"/>
 		
         <member name="NewTableNum" comment="创建的桌子"/>
         <member name="NewTableFailNum" comment="创建的桌子"/>

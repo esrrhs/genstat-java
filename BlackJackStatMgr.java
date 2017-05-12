@@ -70,6 +70,9 @@ public class BlackJackStatMgr
     // 分桌关服失败的数目
     private int JoinCloseFailNum;
     
+    // 分桌vip失败的数目
+    private int JoinVIPFailNum;
+    
     // 创建的桌子
     private int NewTableNum;
     
@@ -562,6 +565,24 @@ public class BlackJackStatMgr
         JoinCloseFailNum += _JoinCloseFailNum;
     }
     
+    // get 分桌vip失败的数目
+    public int getJoinVIPFailNum()
+    {
+        return JoinVIPFailNum;
+    }
+    
+    // set 分桌vip失败的数目
+    public void setJoinVIPFailNum(int _JoinVIPFailNum)
+    {
+        JoinVIPFailNum = _JoinVIPFailNum;
+    }
+    
+    // add 分桌vip失败的数目
+    public void addJoinVIPFailNum(int _JoinVIPFailNum)
+    {
+        JoinVIPFailNum += _JoinVIPFailNum;
+    }
+    
     // get 创建的桌子
     public int getNewTableNum()
     {
@@ -1039,6 +1060,9 @@ public class BlackJackStatMgr
 		// 分桌关服失败的数目
 		JoinCloseFailNum = 0;
 		
+		// 分桌vip失败的数目
+		JoinVIPFailNum = 0;
+		
 		// 创建的桌子
 		NewTableNum = 0;
 		
@@ -1246,6 +1270,9 @@ public class BlackJackStatMgr
 			
 			// 分桌关服失败的数目
 			"JoinCloseFailNum\t%d\t分桌关服失败的数目\n" +
+			
+			// 分桌vip失败的数目
+			"JoinVIPFailNum\t%d\t分桌vip失败的数目\n" +
 			
 			// 创建的桌子
 			"NewTableNum\t%d\t创建的桌子\n" +
@@ -2377,6 +2404,9 @@ public class BlackJackStatMgr
 			
 			// 分桌关服失败的数目
 			, JoinCloseFailNum
+			
+			// 分桌vip失败的数目
+			, JoinVIPFailNum
 			
 			// 创建的桌子
 			, NewTableNum
