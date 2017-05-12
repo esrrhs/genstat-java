@@ -25,6 +25,9 @@ public class BlackJackStatMgr
     // 玩家庄家的桌子数目
     private int MasterTableNum;
     
+    // 系统庄家的桌子数目
+    private int SystemTableNum;
+    
     // 活跃桌子数目
     private int ActiveTableNum;
     
@@ -305,6 +308,24 @@ public class BlackJackStatMgr
     public void addMasterTableNum(int _MasterTableNum)
     {
         MasterTableNum += _MasterTableNum;
+    }
+    
+    // get 系统庄家的桌子数目
+    public int getSystemTableNum()
+    {
+        return SystemTableNum;
+    }
+    
+    // set 系统庄家的桌子数目
+    public void setSystemTableNum(int _SystemTableNum)
+    {
+        SystemTableNum = _SystemTableNum;
+    }
+    
+    // add 系统庄家的桌子数目
+    public void addSystemTableNum(int _SystemTableNum)
+    {
+        SystemTableNum += _SystemTableNum;
     }
     
     // get 活跃桌子数目
@@ -1101,6 +1122,9 @@ public class BlackJackStatMgr
 		// 玩家庄家的桌子数目
 		MasterTableNum = 0;
 		
+		// 系统庄家的桌子数目
+		SystemTableNum = 0;
+		
 		// 活跃桌子数目
 		ActiveTableNum = 0;
 		
@@ -1326,6 +1350,9 @@ public class BlackJackStatMgr
 			
 			// 玩家庄家的桌子数目
 			"MasterTableNum\t%d\t玩家庄家的桌子数目\n" +
+			
+			// 系统庄家的桌子数目
+			"SystemTableNum\t%d\t系统庄家的桌子数目\n" +
 			
 			// 活跃桌子数目
 			"ActiveTableNum\t%d\t活跃桌子数目\n" +
@@ -1907,6 +1934,9 @@ public class BlackJackStatMgr
 			
 			// 玩家庄家的桌子数目
 			, MasterTableNum
+			
+			// 系统庄家的桌子数目
+			, SystemTableNum
 			
 			// 活跃桌子数目
 			, ActiveTableNum
