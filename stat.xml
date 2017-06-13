@@ -16,9 +16,6 @@
         <member name="TotalWatchingPlayerNum" comment="桌子上的观战玩家数目"/>
 		<array name="RoomWatchingPlayerNum" comment="各个房间的观战玩家数目" length="3"/>
 		
-        <member name="TotalFPS" comment="fps数目"/>
-		<array name="FPS" comment="各个线程的fps数目" length="100"/>
-		
         <member name="JoinNum" comment="请求分桌数目"/>
         <member name="JoinQuickNum" comment="快速请求分桌数目"/>
         <member name="JoinClickNum" comment="手动请求分桌数目"/>
